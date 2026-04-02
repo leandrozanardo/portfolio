@@ -25,7 +25,7 @@
     "fullName": "Leandro Zanardo"
   },
   "nav": {
-    "projects": "Projects",
+    "projects": "Strengths",
     "experience": "Experience",
     "stack": "Stack",
     "about": "About",
@@ -37,7 +37,7 @@
     "titleHighlight": "modern, scalable,",
     "titleAfter": "user-centered digital products.",
     "subtitle": "Senior developer with 10+ years of experience specializing in high-performance architectures and seamless user experiences.",
-    "ctaCaseStudies": "View Case Studies",
+    "ctaCaseStudies": "View strengths",
     "ctaResume": "Download Resume",
     "connect": "Connect:",
     "badgeTitle": "Available for Hire",
@@ -54,31 +54,31 @@
     "foundationValue": "UI/UX Design"
   },
   "caseStudies": {
-    "title": "Featured Case Studies",
-    "subtitle": "Proven results across enterprise modernization, fintech, and e-commerce architectures.",
-    "challenge": "Challenge",
-    "outcome": "Outcome",
+    "title": "Core strengths",
+    "subtitle": "Where I add the most value as a senior full-stack engineer: technical leadership on product delivery, digital commerce architecture, and production-grade services.",
+    "challenge": "How I work",
+    "outcome": "What this unlocks",
     "stack": "Stack",
-    "enterprise": {
-      "tag": "Architecture",
-      "title": "Enterprise Modernization",
-      "description": "Legacy modernization for high-traffic environments requiring seamless migration without downtime.",
-      "detail": "Decoupling 15-year-old monolithic systems while maintaining 99.99% uptime.",
-      "stack": "Node.js, AWS Lambda, GraphQL, Redis"
+    "platforms": {
+      "tag": "Technical leadership",
+      "title": "Platforms & product delivery",
+      "description": "I steer architectural choices and the evolution of complex web platforms with cross-functional teams—emphasizing quality, operational stability, and a sustainable delivery cadence.",
+      "detail": "Turn business priorities into clear technical direction, raise the bar on code and process (reviews, testing, automation), and support team growth through hands-on mentoring.",
+      "stack": "React, TypeScript, Node.js / NestJS, automated testing, AWS, CI/CD (GitHub Actions)"
     },
-    "fintech": {
-      "tag": "Fintech",
-      "title": "Global Payment System",
-      "description": "Secure, PCI-compliant global transaction processing integrated across 40+ countries.",
-      "detail": "Reduced transaction latency by 45% and improved fraud detection accuracy by 20%.",
-      "stack": "Java, Spring Boot, PostgreSQL, Kafka"
+    "commerce": {
+      "tag": "Digital commerce",
+      "title": "Headless commerce & integration ecosystems",
+      "description": "Strong command of decoupled e-commerce architectures—catalog, checkout, and operations wired to payments, logistics, and partners—with a focus on performance and long-term maintainability.",
+      "detail": "Consistent API contracts, less coupling across channels, and reusable integrations so new surfaces ship faster without trading off reliability.",
+      "stack": "PHP / Laravel, REST APIs, MySQL / MariaDB, payment & logistics integrations"
     },
-    "risk": {
-      "tag": "Backend",
-      "title": "Real-time Risk Platform",
-      "description": "Low-latency engine for financial risk assessment processing millions of data points per second.",
-      "detail": "Processing complex risk algorithms under 50ms for institutional traders.",
-      "stack": "Rust, Python, ClickHouse, Docker"
+    "apis": {
+      "tag": "Backend & operations",
+      "title": "APIs, integrations & reliability",
+      "description": "Deep skills in designing and operating REST and GraphQL APIs, backend services, and business-critical integration flows—with disciplined error handling and production visibility.",
+      "detail": "Pragmatic versioning, containerized environments, observability, and practices that reduce incidents and time-to-diagnose when things go wrong.",
+      "stack": "Node.js / Express, GraphQL / REST, Docker, PostgreSQL, Redis, APM & structured logging"
     }
   },
   "experience": {

@@ -3,17 +3,17 @@
 export const IMAGES = {
   heroWorkspace:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuB-eEFXbdoQDYuG-p5SWC4POWWKAzJMhhpDwQ8ZE12KudWOOHnbMvpc5SPm_NjPW7toRpTDmWn3YyndYvhnPnNB58L2T2ypdyiiShyYOrxsnUcdWl4RowuHImItgfZ0MA5zCG60Q0qxgDW-TsX_lkLquvZZQn4AlMb9A1MMP2Gh95oQcHz54eTYSbLzxc4iJ-gHAlLUL2eNJpp5zmhDESa2VcgDdPYxK7EFtO6G409HsU23w4-vfr1kXOedwfrlyaZe8rfNrFa5zblA",
-  /** Order: 1st pasted image — enterprise / modernization */
+  /** 1st card — digital platforms / senior delivery */
   caseEnterprise: "/images/case-enterprise.png",
-  /** 2nd pasted image — fintech / global payments */
+  /** 2nd card — headless commerce & integrations */
   caseFintech: "/images/case-fintech.png",
-  /** 3rd pasted image — risk / real-time data */
+  /** 3rd card — APIs, reliability & operations */
   caseRisk: "/images/case-risk.png",
   /** Local asset: public/images/about-portrait.png */
   aboutPortrait: "/images/about-portrait.png",
 } as const;
 
-export type CaseStudyId = "enterprise" | "fintech" | "risk";
+export type CaseStudyId = "platforms" | "commerce" | "apis";
 
 export type CaseStudyVisual = {
   id: CaseStudyId;
@@ -24,19 +24,19 @@ export type CaseStudyVisual = {
 
 export const CASE_STUDIES: CaseStudyVisual[] = [
   {
-    id: "enterprise",
+    id: "platforms",
     imageSrc: IMAGES.caseEnterprise,
     tagTone: "primary",
     detailKind: "challenge",
   },
   {
-    id: "fintech",
+    id: "commerce",
     imageSrc: IMAGES.caseFintech,
     tagTone: "secondary",
     detailKind: "outcome",
   },
   {
-    id: "risk",
+    id: "apis",
     imageSrc: IMAGES.caseRisk,
     tagTone: "tertiary",
     detailKind: "challenge",

@@ -25,7 +25,7 @@
     "fullName": "Leandro Zanardo"
   },
   "nav": {
-    "projects": "Proyectos",
+    "projects": "Competencias",
     "experience": "Experiencia",
     "stack": "Stack",
     "about": "Sobre",
@@ -37,7 +37,7 @@
     "titleHighlight": "productos digitales modernos, escalables",
     "titleAfter": "y centrados en el usuario.",
     "subtitle": "Desarrollador senior con más de 10 años de experiencia en arquitecturas de alto rendimiento y experiencias fluidas.",
-    "ctaCaseStudies": "Ver casos de estudio",
+    "ctaCaseStudies": "Ver competencias",
     "ctaResume": "Descargar currículum",
     "connect": "Conectar:",
     "badgeTitle": "Disponible para contratación",
@@ -54,31 +54,31 @@
     "foundationValue": "Diseño UI/UX"
   },
   "caseStudies": {
-    "title": "Casos de estudio destacados",
-    "subtitle": "Resultados comprobados en modernización enterprise, fintech y arquitecturas de e-commerce.",
-    "challenge": "Desafío",
-    "outcome": "Resultado",
+    "title": "Competencias destacadas",
+    "subtitle": "Dónde más aporto como ingeniero full-stack senior: liderazgo técnico en la entrega de producto, arquitecturas de comercio digital y servicios listos para producción.",
+    "challenge": "Cómo trabajo",
+    "outcome": "Qué posibilita",
     "stack": "Stack",
-    "enterprise": {
-      "tag": "Arquitectura",
-      "title": "Modernización enterprise",
-      "description": "Modernización de legado para entornos de alto tráfico con migración sin interrupciones.",
-      "detail": "Desacoplamiento de sistemas monolíticos de 15 años manteniendo el 99,99% de disponibilidad.",
-      "stack": "Node.js, AWS Lambda, GraphQL, Redis"
+    "platforms": {
+      "tag": "Liderazgo técnico",
+      "title": "Plataformas y entrega de producto",
+      "description": "Capacidad para orientar decisiones de arquitectura y la evolución de plataformas web complejas con equipos multifuncionales, priorizando calidad, estabilidad operativa y un ritmo de entrega sostenible.",
+      "detail": "Traducir prioridades de negocio en dirección técnica clara, elevar el estándar de código y de proceso (revisiones, pruebas, automatización) y acompañar el crecimiento del equipo con mentoría práctica.",
+      "stack": "React, TypeScript, Node.js / NestJS, pruebas automatizadas, AWS, CI/CD (GitHub Actions)"
     },
-    "fintech": {
-      "tag": "Fintech",
-      "title": "Sistema global de pagos",
-      "description": "Procesamiento transaccional global seguro y compatible con PCI en más de 40 países.",
-      "detail": "Latencia reducida un 45% y precisión antifraude mejorada un 20%.",
-      "stack": "Java, Spring Boot, PostgreSQL, Kafka"
+    "commerce": {
+      "tag": "Comercio digital",
+      "title": "E-commerce headless e integraciones",
+      "description": "Dominio de arquitecturas de venta online desacopladas: catálogo, checkout y operaciones conectadas a pagos, logística y partners, con foco en rendimiento y mantenimiento.",
+      "detail": "Contratos de API coherentes, menos acoplamiento entre canales e integraciones reutilizables para lanzar nuevas superficies sin sacrificar confiabilidad.",
+      "stack": "PHP / Laravel, APIs REST, MySQL / MariaDB, integraciones de pago y logística"
     },
-    "risk": {
-      "tag": "Backend",
-      "title": "Plataforma de riesgo en tiempo real",
-      "description": "Motor de baja latencia para evaluación de riesgo financiero con millones de puntos de datos por segundo.",
-      "detail": "Algoritmos de riesgo complejos en menos de 50 ms para traders institucionales.",
-      "stack": "Rust, Python, ClickHouse, Docker"
+    "apis": {
+      "tag": "Backend y operaciones",
+      "title": "APIs, integraciones y confiabilidad",
+      "description": "Sólidas habilidades para diseñar y operar APIs REST y GraphQL, servicios backend e integraciones de misión crítica, con manejo de errores disciplinado y visibilidad en producción.",
+      "detail": "Versionado pragmático, entornos containerizados, observabilidad y prácticas que reducen incidentes y el tiempo de diagnóstico cuando algo falla.",
+      "stack": "Node.js / Express, GraphQL / REST, Docker, PostgreSQL, Redis, APM y logs estructurados"
     }
   },
   "experience": {
