@@ -1,0 +1,156 @@
+{
+  "a11y": {
+    "skipToContent": "Saltar al contenido principal",
+    "footerNav": "Navegación del pie de página",
+    "recruiterSnapshot": "Resumen profesional",
+    "mainNav": "Navegación principal",
+    "themeToggleToLight": "Cambiar a tema claro",
+    "themeToggleToDark": "Cambiar a tema oscuro",
+    "languageSwitcher": "Idioma",
+    "switchToPt": "Cambiar idioma a portugués (Brasil)",
+    "switchToEn": "Cambiar idioma a inglés",
+    "switchToEs": "Cambiar idioma a español",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "linkedinProfile": "Leandro Zanardo en LinkedIn",
+    "githubProfile": "Perfil en GitHub",
+    "socialGeneric": "Enlace social",
+    "openWhatsApp": "Abrir chat de WhatsApp con Leandro Zanardo",
+    "heroWorkspace": "Espacio de desarrollo moderno con varios monitores mostrando código en un estudio minimalista",
+    "caseStudyDecorative": "Visual abstracto del caso de estudio",
+    "aboutPortrait": "Ilustración digital de un hombre profesional con traje oscuro y corbata negra sobre fondo negro"
+  },
+  "brand": {
+    "portfolio": "LZ Portfolio",
+    "fullName": "Leandro Zanardo"
+  },
+  "nav": {
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "stack": "Stack",
+    "about": "Sobre",
+    "resume": "Currículum",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "titleBefore": "Ingeniero de software full-stack construyendo",
+    "titleHighlight": "productos digitales modernos, escalables",
+    "titleAfter": "y centrados en el usuario.",
+    "subtitle": "Desarrollador senior con más de 10 años de experiencia en arquitecturas de alto rendimiento y experiencias fluidas.",
+    "ctaCaseStudies": "Ver casos de estudio",
+    "ctaResume": "Descargar currículum",
+    "connect": "Conectar:",
+    "badgeTitle": "Disponible para contratación",
+    "badgeSubtitle": "Roles de ingeniería senior"
+  },
+  "snapshot": {
+    "experience": "Experiencia",
+    "experienceValue": "10+ años",
+    "coreFocus": "Enfoque principal",
+    "coreFocusValue": "Full-Stack",
+    "expertise": "Experiencia",
+    "expertiseValue": "Sistemas escalables",
+    "foundation": "Base",
+    "foundationValue": "Diseño UI/UX"
+  },
+  "caseStudies": {
+    "title": "Casos de estudio destacados",
+    "subtitle": "Resultados comprobados en modernización enterprise, fintech y arquitecturas de e-commerce.",
+    "challenge": "Desafío",
+    "outcome": "Resultado",
+    "stack": "Stack",
+    "enterprise": {
+      "tag": "Arquitectura",
+      "title": "Modernización enterprise",
+      "description": "Modernización de legado para entornos de alto tráfico con migración sin interrupciones.",
+      "detail": "Desacoplamiento de sistemas monolíticos de 15 años manteniendo el 99,99% de disponibilidad.",
+      "stack": "Node.js, AWS Lambda, GraphQL, Redis"
+    },
+    "fintech": {
+      "tag": "Fintech",
+      "title": "Sistema global de pagos",
+      "description": "Procesamiento transaccional global seguro y compatible con PCI en más de 40 países.",
+      "detail": "Latencia reducida un 45% y precisión antifraude mejorada un 20%.",
+      "stack": "Java, Spring Boot, PostgreSQL, Kafka"
+    },
+    "risk": {
+      "tag": "Backend",
+      "title": "Plataforma de riesgo en tiempo real",
+      "description": "Motor de baja latencia para evaluación de riesgo financiero con millones de puntos de datos por segundo.",
+      "detail": "Algoritmos de riesgo complejos en menos de 50 ms para traders institucionales.",
+      "stack": "Rust, Python, ClickHouse, Docker"
+    }
+  },
+  "experience": {
+    "title": "Trayectoria profesional",
+    "subtitle": "Una década de crecimiento desde agencias boutique hasta liderazgo en ingeniería enterprise.",
+    "job1": {
+      "period": "2018 — Presente",
+      "role": "Ingeniero full-stack senior",
+      "company": "INEX Digital Solutions",
+      "description": "Lideré decisiones arquitectónicas en equipos multifuncionales, entregando plataformas digitales críticas. Mentoría a juniors e implementación de CI/CD que redujo errores de despliegue un 60%."
+    },
+    "job2": {
+      "period": "2015 — 2018",
+      "role": "Arquitecto de software",
+      "company": "Propaganda Store",
+      "description": "Impulsé el desarrollo de un motor de e-commerce headless. Enfoque en rendimiento e integración con logística y pasarelas de pago."
+    }
+  },
+  "stack": {
+    "title": "La sala de máquinas",
+    "subtitle": "Mi stack está curada para escalabilidad, mantenimiento y rendimiento.",
+    "frontend": {
+      "title": "Front-end",
+      "items": ["React / Next.js", "Angular", "TypeScript", "Tailwind CSS", "Bootstrap"]
+    },
+    "backend": {
+      "title": "Back-end",
+      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "GraphQL / REST API", "Microservicios"]
+    },
+    "infra": {
+      "title": "Infraestructura",
+      "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observabilidad (APM, logs)"]
+    },
+    "database": {
+      "title": "Bases de datos",
+      "items": ["PostgreSQL", "MySQL / MariaDB", "MongoDB", "Redis", "Microsoft SQL Server"]
+    },
+    "design": {
+      "title": "Diseño y herramientas",
+      "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "Prototipado UI/UX", "Documentación técnica"]
+    }
+  },
+  "value": {
+    "title": "Propuesta de valor senior",
+    "legacy": {
+      "title": "Modernización de legado",
+      "body": "Me especializo en transformar arquitecturas monolíticas obsoletas en sistemas modulares cloud-native sin interrumpir el negocio."
+    },
+    "maintainable": {
+      "title": "Soluciones mantenibles",
+      "body": "Código pensando en el \"próximo ingeniero\". Priorizo código limpio, autodocumentado y pruebas automatizadas robustas."
+    },
+    "ux": {
+      "title": "Sensibilidad UI/UX",
+      "body": "Puente entre diseño e ingeniería. La implementación técnica no debe comprometer la experiencia del usuario."
+    }
+  },
+  "about": {
+    "title": "Soy Leandro Zanardo.",
+    "subtitle": "Construyendo la columna vertebral de experiencias digitales modernas.",
+    "p1": "Soy ingeniero de software senior apasionado por aplicaciones web complejas y de alto rendimiento. En la última década recorrí la evolución del desarrollo web, del front-end a arquitecturas de back-end complejas.",
+    "p2": "Combino rigor técnico con una comprensión profunda de las necesidades del usuario. Ya sea optimizando una consulta o un microinteracción, busco software confiable y agradable de usar.",
+    "locationLabel": "Ubicación",
+    "locationValue": "Indaiatuba, SP, BR (disponible globalmente)",
+    "availabilityLabel": "Disponibilidad",
+    "availabilityValue": "A convenir"
+  },
+  "footer": {
+    "rights": "© 2024 LZ Engineering. Construido con precisión.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "email": "Correo"
+  }
+}

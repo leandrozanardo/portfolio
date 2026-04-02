@@ -1,0 +1,156 @@
+{
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "footerNav": "Footer navigation",
+    "recruiterSnapshot": "Professional snapshot",
+    "mainNav": "Primary navigation",
+    "themeToggleToLight": "Switch to light theme",
+    "themeToggleToDark": "Switch to dark theme",
+    "languageSwitcher": "Language",
+    "switchToPt": "Switch language to Portuguese (Brazil)",
+    "switchToEn": "Switch language to English",
+    "switchToEs": "Switch language to Spanish",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "linkedinProfile": "Leandro Zanardo on LinkedIn",
+    "githubProfile": "GitHub profile",
+    "socialGeneric": "Social link",
+    "openWhatsApp": "Open WhatsApp chat with Leandro Zanardo",
+    "heroWorkspace": "Modern software development workspace with multiple monitors showing code in a minimalist studio",
+    "caseStudyDecorative": "Abstract visual for case study",
+    "aboutPortrait": "Digital illustration of a professional man in a dark suit and black tie on a black background"
+  },
+  "brand": {
+    "portfolio": "LZ Portfolio",
+    "fullName": "Leandro Zanardo"
+  },
+  "nav": {
+    "projects": "Projects",
+    "experience": "Experience",
+    "stack": "Stack",
+    "about": "About",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "hero": {
+    "titleBefore": "Full-Stack Software Engineer building",
+    "titleHighlight": "modern, scalable,",
+    "titleAfter": "user-centered digital products.",
+    "subtitle": "Senior developer with 10+ years of experience specializing in high-performance architectures and seamless user experiences.",
+    "ctaCaseStudies": "View Case Studies",
+    "ctaResume": "Download Resume",
+    "connect": "Connect:",
+    "badgeTitle": "Available for Hire",
+    "badgeSubtitle": "Senior Engineering Roles"
+  },
+  "snapshot": {
+    "experience": "Experience",
+    "experienceValue": "10+ Years",
+    "coreFocus": "Core Focus",
+    "coreFocusValue": "Full-Stack",
+    "expertise": "Expertise",
+    "expertiseValue": "Scalable Systems",
+    "foundation": "Foundation",
+    "foundationValue": "UI/UX Design"
+  },
+  "caseStudies": {
+    "title": "Featured Case Studies",
+    "subtitle": "Proven results across enterprise modernization, fintech, and e-commerce architectures.",
+    "challenge": "Challenge",
+    "outcome": "Outcome",
+    "stack": "Stack",
+    "enterprise": {
+      "tag": "Architecture",
+      "title": "Enterprise Modernization",
+      "description": "Legacy modernization for high-traffic environments requiring seamless migration without downtime.",
+      "detail": "Decoupling 15-year-old monolithic systems while maintaining 99.99% uptime.",
+      "stack": "Node.js, AWS Lambda, GraphQL, Redis"
+    },
+    "fintech": {
+      "tag": "Fintech",
+      "title": "Global Payment System",
+      "description": "Secure, PCI-compliant global transaction processing integrated across 40+ countries.",
+      "detail": "Reduced transaction latency by 45% and improved fraud detection accuracy by 20%.",
+      "stack": "Java, Spring Boot, PostgreSQL, Kafka"
+    },
+    "risk": {
+      "tag": "Backend",
+      "title": "Real-time Risk Platform",
+      "description": "Low-latency engine for financial risk assessment processing millions of data points per second.",
+      "detail": "Processing complex risk algorithms under 50ms for institutional traders.",
+      "stack": "Rust, Python, ClickHouse, Docker"
+    }
+  },
+  "experience": {
+    "title": "Professional Journey",
+    "subtitle": "A decade of progressive growth from boutique agencies to enterprise engineering leadership.",
+    "job1": {
+      "period": "2018 — Present",
+      "role": "Senior Full-Stack Engineer",
+      "company": "INEX Digital Solutions",
+      "description": "Led architectural decisions for cross-functional teams, overseeing the delivery of high-stakes digital platforms. Mentored junior developers and implemented CI/CD pipelines that reduced deployment errors by 60%."
+    },
+    "job2": {
+      "period": "2015 — 2018",
+      "role": "Software Architect",
+      "company": "Propaganda Store",
+      "description": "Spearheaded the development of a headless e-commerce engine. Focused on performance optimization and integrating third-party logistics and payment gateways."
+    }
+  },
+  "stack": {
+    "title": "The Engine Room",
+    "subtitle": "My technical stack is curated for scalability, maintainability, and performance.",
+    "frontend": {
+      "title": "Frontend",
+      "items": ["React / Next.js", "Angular", "TypeScript", "Tailwind CSS", "Bootstrap"]
+    },
+    "backend": {
+      "title": "Backend",
+      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "GraphQL / REST API", "Microservices"]
+    },
+    "infra": {
+      "title": "Infrastructure",
+      "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observability (APM, logs)"]
+    },
+    "database": {
+      "title": "Databases",
+      "items": ["PostgreSQL", "MySQL / MariaDB", "MongoDB", "Redis", "Microsoft SQL Server"]
+    },
+    "design": {
+      "title": "Design & Tools",
+      "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "UI/UX Prototyping", "Technical Writing"]
+    }
+  },
+  "value": {
+    "title": "Senior-Level Value Proposition",
+    "legacy": {
+      "title": "Legacy Modernization",
+      "body": "I specialize in transforming outdated monolithic architectures into modular, cloud-native systems without disrupting business operations."
+    },
+    "maintainable": {
+      "title": "Maintainable Solutions",
+      "body": "Coding with the \"next engineer\" in mind. I prioritize clean, self-documenting code and robust automated testing frameworks."
+    },
+    "ux": {
+      "title": "UI/UX Sensitivity",
+      "body": "Bridging the gap between design and engineering. I ensure the technical implementation never compromises the user experience."
+    }
+  },
+  "about": {
+    "title": "I'm Leandro Zanardo.",
+    "subtitle": "Building the backbone of modern digital experiences.",
+    "p1": "I am a Senior Software Engineer with a passion for building complex, high-performance web applications. Over the past decade, I've navigated the evolving landscape of web technology, moving from front-end design to complex back-end architectures.",
+    "p2": "My approach combines technical rigor with a deep understanding of user needs. Whether I'm optimizing a database query or fine-tuning a micro-interaction, my goal is always to create software that is as reliable as it is delightful to use.",
+    "locationLabel": "Location",
+    "locationValue": "Indaiatuba, SP, BR (Available Globally)",
+    "availabilityLabel": "Availability",
+    "availabilityValue": "To be discussed"
+  },
+  "footer": {
+    "rights": "© 2024 LZ Engineering. Built with precision.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  }
+}
