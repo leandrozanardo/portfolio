@@ -11,7 +11,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="group flex items-center justify-center rounded-lg bg-surface-container-high p-2.5 text-on-surface ghost-border transition-all hover:border-primary/40"
+      className="group flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-container-high text-on-surface ghost-border transition-all hover:border-primary/40"
       aria-pressed={isDark}
       aria-label={isDark ? t("a11y.themeToggleToLight") : t("a11y.themeToggleToDark")}
     >

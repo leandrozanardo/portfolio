@@ -82,7 +82,7 @@ export function SiteHeader() {
             <button
               ref={triggerRef}
               type="button"
-              className="flex items-center justify-center rounded-lg bg-surface-container-high p-2.5 text-on-surface ghost-border"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-container-high text-on-surface ghost-border"
               aria-expanded={menuOpen}
               aria-controls={panelId}
               aria-label={menuOpen ? t("a11y.closeMenu") : t("a11y.openMenu")}

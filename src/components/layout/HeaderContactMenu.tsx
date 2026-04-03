@@ -168,7 +168,7 @@ export function HeaderContactMenu({ layout, onNavigate }: HeaderContactMenuProps
         id={contactButtonId}
         ref={triggerRef}
         type="button"
-        className="flex h-9 items-center gap-1 rounded-lg bg-surface-container-high px-3 py-2 text-sm font-bold tracking-wide text-on-surface ghost-border transition-colors hover:bg-surface-bright/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-4"
+        className="flex h-9 items-center gap-1 rounded-lg bg-surface-container-high px-3 text-sm font-bold tracking-wide text-on-surface ghost-border transition-colors hover:bg-surface-bright/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:px-4"
         aria-expanded={open}
         aria-haspopup="true"
         aria-controls={open ? menuId : undefined}
