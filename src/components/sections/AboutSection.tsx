@@ -42,6 +42,10 @@ export function AboutSection() {
             <p className="text-base leading-relaxed text-on-surface-variant sm:text-lg">
               {t("about.p1")}
             </p>
+            {/* Education background paragraph (split from intro for clearer layout). */}
+            <p className="text-base leading-relaxed text-on-surface-variant sm:text-lg">
+              {t("about.formation")}
+            </p>
             <p className="text-base leading-relaxed text-on-surface-variant sm:text-lg">
               {t("about.p2")}
             </p>
@@ -51,7 +55,10 @@ export function AboutSection() {
               <p className="text-sm font-bold uppercase tracking-widest text-on-surface">
                 {t("about.locationLabel")}
               </p>
-              <p className="text-on-surface-variant">{t("about.locationValue")}</p>
+              <p className="text-on-surface-variant">
+                {t("about.locationValue")}{" "}
+                <span className="text-xs text-outline">{t("about.locationGlobal")}</span>
+              </p>
             </div>
             <div className="flex flex-col gap-1 border-t border-outline-variant/20 pt-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">
               <p className="text-sm font-bold uppercase tracking-widest text-on-surface">

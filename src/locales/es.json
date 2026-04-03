@@ -179,10 +179,12 @@
   "about": {
     "title": "Soy Leandro Zanardo.",
     "subtitle": "Construyendo la columna vertebral de experiencias digitales modernas.",
-    "p1": "Ingeniero de software full-stack con más de 10 años de experiencia creando aplicaciones web, APIs, sistemas corporativos, paneles y productos digitales. Mi formación reúne Análisis y Desarrollo de Sistemas, Diseño Gráfico y posgrado en Ingeniería de Software.",
+    "p1": "Ingeniero de software full-stack con más de 10 años de experiencia creando aplicaciones web, APIs, sistemas corporativos, paneles y productos digitales.",
+    "formation": "Mi formación reúne Análisis y Desarrollo de Sistemas, Diseño Gráfico y posgrado en Ingeniería de Software, una combinación que fortalece mi trabajo entre arquitectura, producto y experiencia de usuario.",
     "p2": "Conecto arquitectura, evolución de legado, rendimiento, observabilidad y UI/UX para entregar soluciones escalables, confiables y agradables de usar.",
     "locationLabel": "Ubicación",
-    "locationValue": "Indaiatuba, SP, BR (disponible globalmente)",
+    "locationValue": "Indaiatuba, SP, BR",
+    "locationGlobal": "(disponible globalmente)",
     "availabilityLabel": "Disponibilidad",
     "availabilityValue": "A convenir"
   },

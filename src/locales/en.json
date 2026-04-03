@@ -179,10 +179,12 @@
   "about": {
     "title": "I'm Leandro Zanardo.",
     "subtitle": "Building the backbone of modern digital experiences.",
-    "p1": "Full-stack software engineer with 10+ years of experience building web applications, APIs, enterprise systems, dashboards, and digital products. My background combines Systems Analysis and Development, Graphic Design, and a postgraduate degree in Software Engineering.",
+    "p1": "Full-stack software engineer with 10+ years of experience building web applications, APIs, enterprise systems, dashboards, and digital products.",
+    "formation": "My background combines Systems Analysis and Development, Graphic Design, and a postgraduate degree in Software Engineering—a mix that strengthens how I work across architecture, product, and user experience.",
     "p2": "I work across architecture, legacy evolution, performance, observability, and UI/UX to deliver solutions that scale, stay reliable, and feel great to use.",
     "locationLabel": "Location",
-    "locationValue": "Indaiatuba, SP, BR (Available Globally)",
+    "locationValue": "Indaiatuba, SP, BR",
+    "locationGlobal": "(Available globally)",
     "availabilityLabel": "Availability",
     "availabilityValue": "To be discussed"
   },
