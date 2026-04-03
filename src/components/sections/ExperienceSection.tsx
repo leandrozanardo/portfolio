@@ -61,15 +61,14 @@ type ViewportCardProps = {
 
 /** Single card slab in the vertical strip (fixed height; clipped by parent overflow-hidden). */
 function ExperienceViewportCard({ entry, index, activeIndex, labels }: ViewportCardProps) {
-  const isDominant = index === activeIndex;
-  // CHANGED: inactive cards opacity-0 + transition-opacity 500ms (matches strip translate).
+  const isDominant = index === activeIndex; 
 
   return (
     <article
-      className={`flex w-full max-w-4xl shrink-0 flex-col overflow-hidden rounded-2xl bg-surface-container-low p-4 sm:p-6 lg:p-8 dark:bg-surface-container-low will-change-opacity transition-opacity duration-500 ease-out ${
+      className={`origin-center flex w-full max-w-4xl shrink-0 flex-col overflow-hidden rounded-2xl bg-surface-container-low p-4 sm:p-6 lg:p-8 dark:bg-surface-container-low will-change-[transform,opacity] transition-[transform,opacity] duration-500 ease-out ${
         isDominant
-          ? "pointer-events-auto opacity-100 shadow-[0_20px_50px_-24px_rgb(var(--c-primary)/0.18)]"
-          : "pointer-events-none opacity-0"
+          ? "pointer-events-auto scale-100 opacity-100 shadow-[0_20px_50px_-24px_rgb(var(--c-primary)/0.18)]"
+          : "pointer-events-none scale-90 opacity-0"
       }`}
       style={{
         height: CARD_PX,
