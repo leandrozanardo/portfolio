@@ -72,13 +72,17 @@
   },
   "snapshot": {
     "experience": "Experience",
-    "experienceValue": "10+ Years",
+    "experienceValue": "10+ years",
+    "experienceCaption": "Web applications, enterprise systems, and digital products",
     "coreFocus": "Core Focus",
-    "coreFocusValue": "Full-Stack",
+    "coreFocusValue": "End-to-end full-stack",
+    "coreFocusCaption": "Frontend, backend, database, integrations, and deploy",
     "expertise": "Expertise",
-    "expertiseValue": "Scalable Systems",
+    "expertiseValue": "Engineering + UI/UX",
+    "expertiseCaption": "Strong technical foundation with formal design training",
     "foundation": "Foundation",
-    "foundationValue": "UI/UX Design"
+    "foundationValue": "Legacy & modernization",
+    "foundationCaption": "Evolving APIs and business-critical production systems"
   },
   "caseStudies": {
     "title": "Core strengths",

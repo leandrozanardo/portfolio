@@ -73,12 +73,16 @@
   "snapshot": {
     "experience": "Experiência",
     "experienceValue": "10+ anos",
+    "experienceCaption": "Aplicações web, sistemas corporativos e produtos digitais",
     "coreFocus": "Foco principal",
-    "coreFocusValue": "Full-Stack",
+    "coreFocusValue": "Full-stack de ponta a ponta",
+    "coreFocusCaption": "Frontend, backend, banco, integrações e deploy",
     "expertise": "Expertise",
-    "expertiseValue": "Sistemas escaláveis",
+    "expertiseValue": "Engenharia + UI/UX",
+    "expertiseCaption": "Base técnica sólida com formação em design",
     "foundation": "Base",
-    "foundationValue": "Design UI/UX"
+    "foundationValue": "Legado e modernização",
+    "foundationCaption": "Evolução de APIs e sistemas críticos em produção"
   },
   "caseStudies": {
     "title": "Competências em destaque",
