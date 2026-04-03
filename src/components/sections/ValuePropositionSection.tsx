@@ -1,11 +1,9 @@
 import { useTranslation } from "react-i18next";
+import {
+  getValuePropositionIconAccent,
+  VALUE_PROPOSITION_CARDS,
+} from "../../data/valuePropositionCards"; // per-card pastel icon color on glyph only
 import { MaterialIcon } from "../ui/MaterialIcon";
-
-const CARDS = [
-  { key: "legacy" as const, icon: "upgrade" },
-  { key: "maintainable" as const, icon: "settings_suggest" },
-  { key: "ux" as const, icon: "visibility" },
-];
 
 export function ValuePropositionSection() {
   const { t } = useTranslation();
@@ -22,21 +20,27 @@ export function ValuePropositionSection() {
         >
           {t("value.title")}
         </h2>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
-          {CARDS.map(({ key, icon }) => (
-            <div key={key} className="space-y-4">
-              <div className="flex size-12 items-center justify-center rounded-lg bg-surface-container-high text-primary ghost-border">
-                <MaterialIcon name={icon} />
-              </div>
-              <h3 className="text-xl font-bold text-on-surface">
-                {t(`value.${key}.title`)}
-              </h3>
-              <p className="text-sm leading-relaxed text-on-surface-variant">
-                {t(`value.${key}.body`)}
-              </p>
-            </div>
-          ))}
-        </div>
+        <ul
+          id="value-proposition-list"
+          className="m-0 grid list-none grid-cols-1 gap-10 p-0 sm:grid-cols-2 xl:grid-cols-3 xl:gap-12"
+        >
+          {VALUE_PROPOSITION_CARDS.map(({ key, icon }) => {
+            const { iconColor } = getValuePropositionIconAccent(key); // pastel RGB on span only
+            return (
+              <li key={key} className="space-y-4">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-surface-container-high ghost-border">
+                  <MaterialIcon name={icon} color={iconColor} />
+                </div>
+                <h3 className="text-xl font-bold text-on-surface">
+                  {t(`value.${key}.title`)}
+                </h3>
+                <p className="text-sm leading-relaxed text-on-surface-variant">
+                  {t(`value.${key}.body`)}
+                </p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

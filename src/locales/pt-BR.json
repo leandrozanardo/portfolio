@@ -130,15 +130,27 @@
     "title": "Proposta de valor sênior",
     "legacy": {
       "title": "Modernização de legado",
-      "body": "Especializo-me em transformar arquiteturas monolíticas legadas em sistemas modulares e cloud-native sem interromper a operação do negócio."
+      "body": "Transformo sistemas e APIs legadas em soluções mais seguras e sustentáveis, com foco em evolução contínua sem parar a operação — experiência direta em produtos regulados e alto volume."
     },
-    "maintainable": {
-      "title": "Soluções sustentáveis",
-      "body": "Programando pensando no \"próximo engenheiro\". Priorizo código limpo, autodocumentado e testes automatizados robustos."
+    "reliability": {
+      "title": "Confiabilidade em produção",
+      "body": "Sustentação, análise de cenários críticos e correção orientada a causa raiz. Entendo regras de negócio consolidadas e já entreguei fluxos sensíveis, como conciliação de pagamentos com relatórios e rastreabilidade."
+    },
+    "observability": {
+      "title": "Cloud, deploy e observabilidade",
+      "body": "Apoio entregas com AWS, pipelines e ferramentas de APM/monitoramento (ex.: Elastic APM, New Relic, Argo CD), reduzindo tempo para diagnosticar incidentes e acompanhar saúde do sistema."
+    },
+    "fullstack": {
+      "title": "Full-stack e integrações",
+      "body": "APIs e aplicações com Node.js, NestJS, TypeScript e front em React, Next.js e Angular, além de integrações e, quando o contexto pede, microfrontends — do desenho técnico à feature em produção."
+    },
+    "alignment": {
+      "title": "Negócio, qualidade e time",
+      "body": "Code review, alinhamento com stakeholders, tradução de demandas em entregas aderentes e colaboração com produto e engenharia — incluindo interface com equipes de sucesso ao cliente, priorização, critérios de aceite e ownership de backlog quando o contexto exige papel híbrido técnico-produto."
     },
     "ux": {
-      "title": "Sensibilidade UI/UX",
-      "body": "Conecto design e engenharia. Garanto que a implementação técnica não comprometa a experiência do usuário."
+      "title": "UI/UX e produto utilizável",
+      "body": "Formação e prática em design gráfico e UI/UX: interfaces consistentes, foco em eficiência operacional e na experiência do usuário, sem sacrificar viabilidade técnica."
     }
   },
   "about": {

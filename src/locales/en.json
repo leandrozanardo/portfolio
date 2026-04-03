@@ -129,16 +129,28 @@
   "value": {
     "title": "Senior-Level Value Proposition",
     "legacy": {
-      "title": "Legacy Modernization",
-      "body": "I specialize in transforming outdated monolithic architectures into modular, cloud-native systems without disrupting business operations."
+      "title": "Legacy modernization",
+      "body": "I evolve legacy systems and APIs into safer, more sustainable solutions with continuous delivery and minimal operational disruption — hands-on in regulated, high-volume product contexts."
     },
-    "maintainable": {
-      "title": "Maintainable Solutions",
-      "body": "Coding with the \"next engineer\" in mind. I prioritize clean, self-documenting code and robust automated testing frameworks."
+    "reliability": {
+      "title": "Production reliability",
+      "body": "Maintenance, critical-scenario analysis, and root-cause-oriented fixes. I work with entrenched business rules and have shipped sensitive flows such as payment reconciliation with reporting and traceability."
+    },
+    "observability": {
+      "title": "Cloud, deploy & observability",
+      "body": "I support releases with AWS, pipelines, and APM/monitoring tooling (e.g., Elastic APM, New Relic, Argo CD), shortening time to diagnose incidents and track system health."
+    },
+    "fullstack": {
+      "title": "Full-stack & integrations",
+      "body": "APIs and apps with Node.js, NestJS, TypeScript, and React, Next.js, and Angular on the front, plus integrations and microfrontends when the context calls for it — from technical design to production features."
+    },
+    "alignment": {
+      "title": "Business, quality & teamwork",
+      "body": "Code review, stakeholder alignment, turning requests into fit-for-purpose delivery, and close collaboration with engineering and product — including regular interface with customer-success-style teams plus prioritization, acceptance criteria, and backlog ownership when the context calls for a hybrid technical-product role."
     },
     "ux": {
-      "title": "UI/UX Sensitivity",
-      "body": "Bridging the gap between design and engineering. I ensure the technical implementation never compromises the user experience."
+      "title": "UI/UX & usable product",
+      "body": "Background and practice in graphic design and UI/UX: consistent interfaces, operational efficiency, and strong user experience without sacrificing technical feasibility."
     }
   },
   "about": {
