@@ -61,7 +61,7 @@ function CaseStudyCard({ study }: { study: CaseStudyVisual }) {
       <div className="aspect-[16/10] overflow-hidden bg-[rgb(var(--c-case-study-thumb-bg))]">
         <img
           src={study.imageSrc}
-          alt=""
+          alt={t(`${base}.imageAlt`)}
           className="h-full w-full object-cover opacity-50 transition-transform duration-500 group-hover:scale-105"
           width={640}
           height={400}
@@ -95,9 +95,7 @@ function CaseStudyCard({ study }: { study: CaseStudyVisual }) {
             <p className="mb-1 text-[10px] font-bold uppercase tracking-widest text-outline">
               {t("caseStudies.stack")}
             </p>
-            <p className="text-xs font-medium text-on-surface">
-              {t(`${base}.stack`)}
-            </p>
+            <p className="text-xs font-medium text-on-surface">{t(`${base}.stack`)}</p>
           </div>
         </div>
       </div>

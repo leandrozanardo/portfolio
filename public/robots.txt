@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Production builds with VITE_SITE_URL also emit sitemap.xml and a Sitemap: directive in robots.txt — CHANGED: default crawl policy for dev/static hosting
+# Production builds with VITE_SITE_URL also emit sitemap.xml and a Sitemap: line here (see vite.config.ts).

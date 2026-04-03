@@ -26,7 +26,9 @@ const ICON_CSS_VARS: Record<ValuePropositionCardKey, string> = {
 };
 
 /** Resolves icon color for the card glyph (inline style rgb(var(--token))). */
-export function getValuePropositionIconAccent(key: ValuePropositionCardKey): ValuePropositionIconAccent {
+export function getValuePropositionIconAccent(
+  key: ValuePropositionCardKey,
+): ValuePropositionIconAccent {
   const token = ICON_CSS_VARS[key];
   return { iconColor: `rgb(var(${token}))` };
 }

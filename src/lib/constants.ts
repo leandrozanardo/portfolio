@@ -1,6 +1,12 @@
 export const THEME_STORAGE_KEY = "portfolio-theme" as const;
 export const LOCALE_STORAGE_KEY = "portfolio-locale" as const;
 
+/** Matches shell `meta[name="theme-color"]` for mobile browser chrome (light / dark surfaces). */
+export const THEME_COLOR_META = {
+  dark: "#0e0e0e",
+  light: "#f7f8fc",
+} as const;
+
 export const CV_PATH = "/docs/CV.docx" as const;
 
 export const CONTACT_MAILTO = "mailto:leandrozanardo@gmail.com" as const;

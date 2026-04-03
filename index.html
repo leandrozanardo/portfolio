@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -20,14 +20,20 @@
     <meta name="theme-color" content="#0e0e0e" />
     <meta name="color-scheme" content="dark light" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Leandro Zanardo — Engenheiro Full-Stack | Portfolio" />
+    <meta
+      property="og:title"
+      content="Leandro Zanardo — Engenheiro Full-Stack | Portfolio"
+    />
     <meta
       property="og:description"
       content="Engenheiro full-stack sênior, 10+ anos: React, TypeScript, Node/NestJS, AWS, e-commerce headless e APIs. Indaiatuba, SP. Atuação remota e global."
     />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Leandro Zanardo — Engenheiro Full-Stack | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Leandro Zanardo — Engenheiro Full-Stack | Portfolio"
+    />
     <meta
       name="twitter:description"
       content="Engenheiro full-stack sênior, 10+ anos: React, TypeScript, Node/NestJS, AWS, e-commerce headless e APIs. Indaiatuba, SP."
@@ -69,7 +75,7 @@
           var lang = localStorage.getItem("portfolio-locale") || "pt-BR";
           root.setAttribute(
             "lang",
-            lang === "pt-BR" ? "pt-BR" : lang === "es" ? "es" : "en"
+            lang === "pt-BR" ? "pt-BR" : lang === "es" ? "es" : "en",
           );
         } catch (e) {
           document.documentElement.classList.add("dark");

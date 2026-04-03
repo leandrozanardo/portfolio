@@ -8,15 +8,15 @@ import {
   setMetaByProperty,
 } from "../../lib/documentMeta";
 import { resolveSiteOrigin } from "../../lib/site";
-// Hreflang / prerender constraints: see ../../lib/seoRenderingPolicy.ts — CHANGED: plan documentation
 
+/** Crawler and prerender trade-offs for this SPA are documented in `lib/seoRenderingPolicy.ts`. */
 const JSON_LD_SCRIPT_ID = "portfolio-schema-jsonld";
 
-/** Dedicated Open Graph asset under public/ (1200×630) — CHANGED: plan P0 social preview */
+/** Open Graph image served from `public/images` (1200×630). */
 const OG_IMAGE_PATH = "/images/og.png";
 const OG_IMAGE_WIDTH = 1200;
 const OG_IMAGE_HEIGHT = 630;
-/** Person schema image (visible on page) — CHANGED: align JSON-LD with About portrait, not OG artwork */
+/** Person node in JSON-LD uses the same portrait as the About section (not the OG card artwork). */
 const PERSON_IMAGE_PATH = "/images/about-portrait.png";
 
 function localeToOgLocale(lng: string): string {
@@ -32,16 +32,17 @@ export function SeoHead() {
     const origin = resolveSiteOrigin();
     const pageUrl = origin ? `${origin}/` : "";
     const imageUrl = origin ? `${origin}${OG_IMAGE_PATH}` : OG_IMAGE_PATH;
-    const personImageUrl = origin
-      ? `${origin}${PERSON_IMAGE_PATH}`
-      : PERSON_IMAGE_PATH;
+    const personImageUrl = origin ? `${origin}${PERSON_IMAGE_PATH}` : PERSON_IMAGE_PATH;
 
     document.title = t("seo.title");
 
     setMetaByName("description", t("seo.description"));
     setMetaByName("keywords", t("seo.keywords"));
     setMetaByName("author", t("brand.fullName"));
-    setMetaByName("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    setMetaByName(
+      "robots",
+      "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    );
 
     setMetaByProperty("og:type", "website");
     setMetaByProperty("og:title", t("seo.title"));
@@ -74,8 +75,9 @@ export function SeoHead() {
           const websiteId = `${pageUrl}#website`;
           const profileId = `${pageUrl}#profilepage`;
           const personId = `${pageUrl}#person`;
-          const personImageAbsolute =
-            personImageUrl.startsWith("http") ? personImageUrl : undefined;
+          const personImageAbsolute = personImageUrl.startsWith("http")
+            ? personImageUrl
+            : undefined;
           return [
             {
               "@type": "WebSite",

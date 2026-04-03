@@ -91,6 +91,7 @@
     "outcome": "What this unlocks",
     "stack": "Stack",
     "platforms": {
+      "imageAlt": "Visual composition suggesting web platforms and product delivery.",
       "tag": "Technical leadership",
       "title": "Platforms & product delivery",
       "description": "I steer architectural choices and the evolution of complex web platforms with cross-functional teams—emphasizing quality, operational stability, and a sustainable delivery cadence.",
@@ -98,6 +99,7 @@
       "stack": "React, TypeScript, Node.js / NestJS, automated testing, AWS, CI/CD (GitHub Actions)"
     },
     "commerce": {
+      "imageAlt": "Visual composition suggesting headless commerce and integrations.",
       "tag": "Digital commerce",
       "title": "Headless commerce & integration ecosystems",
       "description": "Strong command of decoupled e-commerce architectures—catalog, checkout, and operations wired to payments, logistics, and partners—with a focus on performance and long-term maintainability.",
@@ -105,6 +107,7 @@
       "stack": "PHP / Laravel, REST APIs, MySQL / MariaDB, payment & logistics integrations"
     },
     "apis": {
+      "imageAlt": "Visual composition suggesting APIs, integrations, and reliability.",
       "tag": "Backend & operations",
       "title": "APIs, integrations & reliability",
       "description": "Deep skills in designing and operating REST and GraphQL APIs, backend services, and business-critical integration flows—with disciplined error handling and production visibility.",
@@ -136,22 +139,46 @@
     "backend": {
       "title": "Backend",
       "context": "Services, integrations, and business rules with a reliability focus.",
-      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "REST API", "Microservices"]
+      "items": [
+        "Node.js / Express",
+        "NestJS",
+        "PHP / Laravel / CodeIgniter",
+        "REST API",
+        "Microservices"
+      ]
     },
     "infra": {
       "title": "Infrastructure",
       "context": "Deploy, monitoring, and operations with a production mindset.",
-      "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observability (APM, logs)"]
+      "items": [
+        "AWS / GCP",
+        "Docker / K8s",
+        "CI/CD (GitHub Actions)",
+        "Serverless",
+        "Observability (APM, logs)"
+      ]
     },
     "database": {
       "title": "Databases",
       "context": "Modeling and dependable persistence as the foundation for apps and integrations.",
-      "items": ["MySQL / MariaDB", "Microsoft SQL Server", "PostgreSQL", "MongoDB", "Redis"]
+      "items": [
+        "MySQL / MariaDB",
+        "Microsoft SQL Server",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ]
     },
     "design": {
       "title": "Design & Tools",
       "context": "From concept to handoff—prototyping, visuals, and docs aligned with engineering.",
-      "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "UI/UX Prototyping", "Technical Writing"]
+      "items": [
+        "Figma / Google Stitch",
+        "Adobe Suite",
+        "Jira / Agile",
+        "UI/UX Prototyping",
+        "Technical Writing"
+      ]
     }
   },
   "value": {

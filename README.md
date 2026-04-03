@@ -4,6 +4,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?logo=tailwind-css&logoColor=white)
+[![CI](https://github.com/leandrozanardo/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/leandrozanardo/portfolio/actions/workflows/ci.yml)
 
 **Full-stack software engineer** portfolio — a fast, accessible, multilingual site that doubles as a **live code sample**: component-driven UI, strict TypeScript, and production-minded UX (themes, i18n, resume download).
 
@@ -13,36 +14,35 @@
 
 ## Highlights
 
-| What you’ll notice | Why it matters |
-| ------------------ | -------------- |
-| **React 18 + TypeScript + Vite** | Modern toolchain, fast feedback, type-safe UI |
-| **Tailwind CSS** | Consistent design system, responsive layout |
-| **i18next** — PT-BR, EN, ES | International-ready product thinking |
-| **Light / dark theme** with persistence | Real-world UX details |
-| **Accessibility** — skip link, semantic sections, ARIA where it counts | Inclusive, professional delivery |
-| **Case studies & experience** | Clear narrative of impact and stack |
+| What you’ll notice                                                     | Why it matters                                |
+| ---------------------------------------------------------------------- | --------------------------------------------- |
+| **React 18 + TypeScript + Vite**                                       | Modern toolchain, fast feedback, type-safe UI |
+| **Tailwind CSS**                                                       | Consistent design system, responsive layout   |
+| **i18next** — PT-BR, EN, ES                                            | International-ready product thinking          |
+| **Light / dark theme** with persistence                                | Real-world UX details                         |
+| **Accessibility** — skip link, semantic sections, ARIA where it counts | Inclusive, professional delivery              |
+| **Case studies & experience**                                          | Clear narrative of impact and stack           |
 
 ---
 
 ## Live site & contact
 
-| | |
-| --- | --- |
-| **Repository** | [github.com/leandrozanardo/portfolio](https://github.com/leandrozanardo/portfolio) |
-| **LinkedIn** | [linkedin.com/in/leandro-zanardo](https://www.linkedin.com/in/leandro-zanardo/) |
-| **GitHub** | [github.com/leandrozanardo](https://github.com/leandrozanardo/) |
-
-_Add your production URL here after deploy (e.g. Vercel, Netlify, GitHub Pages)._
+|                |                                                                                                                                                                                                                                                           |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Repository** | [github.com/leandrozanardo/portfolio](https://github.com/leandrozanardo/portfolio)                                                                                                                                                                        |
+| **LinkedIn**   | [linkedin.com/in/leandro-zanardo](https://www.linkedin.com/in/leandro-zanardo/)                                                                                                                                                                           |
+| **GitHub**     | [github.com/leandrozanardo](https://github.com/leandrozanardo/)                                                                                                                                                                                           |
+| **Production** | Point your static host at `dist/` after `npm run build`. Set `VITE_SITE_URL` in `.env` / host env to the **public origin** (no trailing slash) so canonical URLs, Open Graph images, and `sitemap.xml` stay correct — see [`.env.example`](.env.example). |
 
 ---
 
 ## Tech stack (this project)
 
-- **UI:** React 18, Tailwind CSS  
-- **Language:** TypeScript (strict build via `tsc --noEmit`)  
-- **Build:** Vite 6  
-- **i18n:** i18next + react-i18next  
-- **Quality:** ESLint 9  
+- **UI:** React 18, Tailwind CSS
+- **Language:** TypeScript (strict build via `tsc --noEmit`)
+- **Build:** Vite 6
+- **i18n:** i18next + react-i18next
+- **Quality:** ESLint 9 (TypeScript + React Hooks + jsx-a11y), Prettier, Vitest + Testing Library
 
 ---
 
@@ -59,12 +59,34 @@ Open the URL printed in the terminal (typically `http://localhost:5173`).
 
 ### Scripts
 
-| Command | Description |
-| ------- | ----------- |
-| `npm run dev` | Start dev server |
-| `npm run build` | Typecheck + production build |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
+| Command                | Description                                                              |
+| ---------------------- | ------------------------------------------------------------------------ |
+| `npm run dev`          | Start dev server                                                         |
+| `npm run build`        | Typecheck + production build                                             |
+| `npm run preview`      | Preview production build locally                                         |
+| `npm run lint`         | Run ESLint                                                               |
+| `npm run format`       | Format with Prettier                                                     |
+| `npm run format:check` | Check formatting                                                         |
+| `npm run test`         | Run Vitest (unit / smoke tests)                                          |
+| `npm run verify`       | Format check + lint + tests + build (same chain as CI, without `npm ci`) |
+
+After `npm install` or `npm ci`, run `npm run verify`. On **Windows PowerShell 5.x**, `&&` between commands is not supported—use `npm run verify` instead of chaining with `&&`, or upgrade to **PowerShell 7+** / use **cmd.exe**.
+
+**Windows: `npm ci` fails with `EPERM` / `unlink` on `esbuild.exe`**
+
+Something is locking that file (dev server, antivirus, another terminal). Close `npm run dev` / Vite, then either retry `npm ci` or reset deps:
+
+`Remove-Item -Recurse -Force node_modules` → `npm install`
+
+If `npm install` fails with **`ENOTEMPTY`** / **`rmdir`**, your `node_modules` tree is inconsistent—delete the folder (after closing dev servers) and run `npm install` again.
+
+**IDE: hundreds of “Cannot find module 'react'” / JSX errors**
+
+Usually the editor is analyzing the project **without** a complete `node_modules`, or it is using a **different TypeScript** than the repo. After a successful `npm install`, choose **TypeScript: Select Workspace Version** in the command palette (this repo includes [`.vscode/settings.json`](.vscode/settings.json) to prefer `node_modules/typescript`).
+
+**`prettier` / `eslint` not recognized inside `npm run`**
+
+Scripts call the local CLI via `npx` (e.g. `npx prettier`) so Windows does not depend on a fragile `node_modules/.bin` PATH. If verify still fails, your install is incomplete—fix `node_modules` as above.
 
 ---
 
@@ -75,9 +97,11 @@ src/
   components/     # Layout, sections, controls, UI primitives
   context/        # Theme provider
   data/           # Portfolio content & assets mapping
+  hooks/          # Shared hooks (focus / disclosure patterns)
   i18n/           # i18next configuration
   locales/        # pt-BR, en, es JSON strings
   lib/            # Shared constants (contact, CV path, etc.)
+  test/           # Vitest setup
 public/
   images/         # Case study & about imagery
   docs/CV.docx    # Résumé for download CTA (Word)

@@ -2,6 +2,7 @@ import type { ReactElement } from "react";
 import { useEffect, useId, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { LocaleCode } from "../../lib/constants";
+import { useDisclosureFocus } from "../../hooks/useDisclosureFocus";
 
 const LOCALES: {
   code: LocaleCode;
@@ -35,15 +36,17 @@ export function LanguageSwitcher() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
   const buttonId = useId();
+  const { triggerRef, panelRef } = useDisclosureFocus(open);
 
   const resolved = i18n.resolvedLanguage ?? i18n.language;
   const activeLocale = LOCALES.find((l) => l.code === resolved) ?? LOCALES[0]!;
   const ActiveFlag = activeLocale.Flag;
-  
+
   useEffect(() => {
     if (!open) return;
     const onDoc = (e: MouseEvent) => {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setOpen(false);
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node))
+        setOpen(false);
     };
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
@@ -67,10 +70,11 @@ export function LanguageSwitcher() {
     <div ref={wrapRef} className="relative">
       <button
         id={buttonId}
+        ref={triggerRef}
         type="button"
         className="flex h-9 items-center gap-0.5 rounded-lg bg-surface-container-high py-1 pl-1 pr-0.5 ghost-border transition-colors hover:bg-surface-bright/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:gap-1 sm:pr-1"
         aria-expanded={open}
-        aria-haspopup="menu"
+        aria-haspopup="true"
         aria-controls={open ? menuId : undefined}
         aria-label={open ? t("a11y.closeLanguageMenu") : t("a11y.openLanguageMenu")}
         onClick={() => setOpen((o) => !o)}
@@ -92,9 +96,10 @@ export function LanguageSwitcher() {
 
       {open ? (
         <div
+          ref={panelRef}
           id={menuId}
-          role="menu"
-          aria-label={t("a11y.languageOptions")}
+          role="group"
+          aria-labelledby={buttonId}
           className="absolute right-0 top-[calc(100%+6px)] z-[60] min-w-[11rem] rounded-lg border border-outline-variant/20 bg-surface-container-high py-1 shadow-lg ghost-border"
         >
           {LOCALES.map(({ code, Flag, labelKey, shortLabel }) => {
@@ -103,7 +108,6 @@ export function LanguageSwitcher() {
               <button
                 key={code}
                 type="button"
-                role="menuitem"
                 className={`flex w-full items-center gap-3 px-3 py-2.5 text-left text-sm transition-colors focus:outline-none focus-visible:bg-surface-bright/40 ${
                   active
                     ? "bg-primary-container/25 text-on-surface"
@@ -113,13 +117,23 @@ export function LanguageSwitcher() {
                 aria-label={t(labelKey)}
                 onClick={() => pick(code)}
               >
-                <span className="size-5 shrink-0 overflow-hidden rounded-sm shadow-sm" aria-hidden>
+                <span
+                  className="size-5 shrink-0 overflow-hidden rounded-sm shadow-sm"
+                  aria-hidden
+                >
                   <Flag />
                 </span>
-                <span className="min-w-0 flex-1 font-medium text-on-surface">{shortLabel}</span>
-                <span className="flex size-5 shrink-0 items-center justify-center" aria-hidden>
+                <span className="min-w-0 flex-1 font-medium text-on-surface">
+                  {shortLabel}
+                </span>
+                <span
+                  className="flex size-5 shrink-0 items-center justify-center"
+                  aria-hidden
+                >
                   {active ? (
-                    <span className="material-symbols-outlined text-lg text-primary">check</span>
+                    <span className="material-symbols-outlined text-lg text-primary">
+                      check
+                    </span>
                   ) : null}
                 </span>
               </button>

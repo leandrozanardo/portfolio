@@ -57,7 +57,9 @@ export function AboutSection() {
               </p>
               <p className="text-on-surface-variant">
                 {t("about.locationValue")}{" "}
-                <span className="text-xs text-outline">{t("about.locationGlobal")}</span>
+                <span className="text-xs text-outline">
+                  {t("about.locationGlobal")}
+                </span>
               </p>
             </div>
             <div className="flex flex-col gap-1 border-t border-outline-variant/20 pt-6 sm:border-l sm:border-t-0 sm:pl-6 sm:pt-0">

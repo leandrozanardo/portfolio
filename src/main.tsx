@@ -14,6 +14,6 @@ void i18nInitPromise.then(() => {
           <App />
         </ThemeProvider>
       </I18nextProvider>
-    </StrictMode>
+    </StrictMode>,
   );
 });

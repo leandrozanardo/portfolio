@@ -1,5 +1,7 @@
-import { useCallback, useEffect, useId, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useDisclosureFocus } from "../../hooks/useDisclosureFocus";
+import { useFocusTrap } from "../../hooks/useFocusTrap";
 import { LanguageSwitcher } from "../controls/LanguageSwitcher";
 import { ThemeToggle } from "../controls/ThemeToggle";
 import { LogoMark } from "../ui/LogoMark";
@@ -17,6 +19,10 @@ export function SiteHeader() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const panelId = useId();
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const { triggerRef, panelRef } = useDisclosureFocus(menuOpen);
+
+  useFocusTrap(menuOpen, dialogRef);
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -39,11 +45,10 @@ export function SiteHeader() {
       <header className="fixed left-0 right-0 top-0 z-50 glass-nav px-4 py-3 sm:px-6 lg:px-10 lg:py-4">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
           <a
-            href="#"
+            href="#main-content"
             className="flex min-w-0 items-center gap-3 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t("brand.portfolio")}
           >
-            {/* Logo mark ~1.5× default (size-6 → size-9) for header */}
             <LogoMark className="size-9" />
             <span className="truncate text-lg font-bold leading-tight tracking-tight text-on-surface">
               {t("brand.portfolio")}
@@ -75,6 +80,7 @@ export function SiteHeader() {
             <LanguageSwitcher />
             <ThemeToggle />
             <button
+              ref={triggerRef}
               type="button"
               className="flex items-center justify-center rounded-lg bg-surface-container-high p-2.5 text-on-surface ghost-border"
               aria-expanded={menuOpen}
@@ -92,19 +98,23 @@ export function SiteHeader() {
 
       {menuOpen ? (
         <div
+          ref={dialogRef}
           className="fixed inset-0 z-40 lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label={t("a11y.mainNav")}
           id={panelId}
         >
-          <button
-            type="button"
+          {/* Scrim: pointer dismiss only; Escape is handled on document while the drawer is open. */}
+          <div
             className="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-sm"
-            aria-label={t("a11y.closeMenu")}
+            aria-hidden="true"
             onClick={closeMenu}
           />
-          <div className="absolute right-0 top-0 flex h-full w-[min(100%,320px)] flex-col gap-6 border-l border-outline-variant/20 bg-surface-container-low p-6 pt-24 shadow-xl">
+          <div
+            ref={panelRef}
+            className="absolute right-0 top-0 flex h-full w-[min(100%,320px)] flex-col gap-6 border-l border-outline-variant/20 bg-surface-container-low p-6 pt-24 shadow-xl"
+          >
             <nav className="flex flex-col gap-4" aria-label={t("a11y.mainNav")}>
               {NAV_LINKS.map(({ href, key }) => (
                 <a

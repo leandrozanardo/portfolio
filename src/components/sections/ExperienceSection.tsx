@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { getExperienceEntries } from "../../data/experience";
 import type { ExperienceEntry } from "../../data/experience";
 
-/** Max visible window height on large screens (px) — CHANGED: cap only; fluid below. */
+/** Max visible window height on large screens (px); layout stays fluid below this cap. */
 const VIEWPORT_MAX_PX = 720;
 
 /** Min viewport height so carousel stays usable on small viewports (px). */
@@ -20,7 +20,7 @@ const VIEWPORT_MIN_PX = 280;
 /** Max card content height on large screens (px); scales down with measured viewport. */
 const CARD_MAX_PX = 680;
 
-/** Min card content height (px) — CHANGED: avoid unreadable slivers when viewport is tight. */
+/** Min card content height (px) so short viewports never collapse the card to a sliver. */
 const CARD_MIN_PX = 240;
 
 /** Gap between stacked cards in the strip (px). */
@@ -29,21 +29,21 @@ const CARD_GAP_PX = 16;
 /** Outer margin around each card slab (px); included in strip height math. */
 const CARD_MARGIN_PX = 10;
 
-/** Small gutter between card block and viewport clip (px) — CHANGED: proportional layout. */
+/** Inner gutter between the card block and the viewport clip (px). */
 const VIEWPORT_INNER_GUTTER_PX = 8;
 
 function clamp(n: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, n));
 }
 
-/** Card block height in the strip (card + vertical margin). — CHANGED: driven by measured card height. */
+/** Card block height in the strip (content height plus vertical margins). */
 function cardBlockHeightPx(cardContentHeightPx: number): number {
   return cardContentHeightPx + 2 * CARD_MARGIN_PX;
 }
 
 /**
  * Vertical translate so the center of card `index` aligns with the viewport center (horizontal via items-center).
- * Replaces linear index/(n-1) interpolation — CHANGED: per-index centering + measured viewport/card heights.
+ * Uses measured viewport and card heights instead of a linear index/(n-1) interpolation.
  */
 function translateYToCenterCard(
   index: number,
@@ -58,7 +58,7 @@ function translateYToCenterCard(
   return viewportHeightPx / 2 - cardCenterY;
 }
 
-/** Observed content height of an element; 0 until first layout — CHANGED: sync transforms with real clip box. */
+/** Observed content height of an element; 0 until first layout (keeps transforms aligned with the clip box). */
 function useObservedContentHeight(elementRef: RefObject<HTMLElement | null>): number {
   const [heightPx, setHeightPx] = useState(0);
 
@@ -82,7 +82,7 @@ function useObservedContentHeight(elementRef: RefObject<HTMLElement | null>): nu
   return heightPx;
 }
 
-/** Card content height from measured viewport — CHANGED: proportional, bounded by CARD_MIN/CARD_MAX. */
+/** Card content height derived from the measured viewport, clamped to CARD_MIN/CARD_MAX. */
 function cardContentHeightFromViewport(viewportHeightPx: number): number {
   if (viewportHeightPx <= 0) return CARD_MAX_PX;
   const available = viewportHeightPx - 2 * CARD_MARGIN_PX - VIEWPORT_INNER_GUTTER_PX;
@@ -105,7 +105,7 @@ type ViewportCardProps = {
   entry: ExperienceEntry;
   index: number;
   activeIndex: number;
-  /** Content area height (px) — CHANGED: matches measured viewport for proportional layout. */
+  /** Content area height (px), derived from the measured viewport. */
   cardContentHeightPx: number;
   labels: {
     responsibilities: string;
@@ -179,7 +179,9 @@ function ExperienceCardBody({
         >
           {entry.role}
         </h3>
-        <p className="text-base font-semibold text-on-surface sm:text-lg">{entry.company}</p>
+        <p className="text-base font-semibold text-on-surface sm:text-lg">
+          {entry.company}
+        </p>
         <p className="text-xs text-on-surface-variant sm:text-sm">{entry.location}</p>
       </header>
 
@@ -192,7 +194,7 @@ function ExperienceCardBody({
           className={isPinned ? "min-h-0 overflow-hidden" : ""}
           aria-label={labels.responsibilities}
         >
-          {/* CHANGED: label is not a heading — outline stays H2 (section) → H3 (role) for SEO */}
+          {/* Uppercase label stays a paragraph so the outline remains section H2 → role H3. */}
           <p className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-outline">
             {labels.responsibilities}
           </p>
@@ -319,10 +321,13 @@ export function ExperienceSection() {
   );
 
   /** Nav / keyboard: move strip inside viewport only — does not scroll the page. */
-  const goToIndex = useCallback((index: number) => {
-    if (n <= 0) return;
-    setActiveIndex(clamp(Math.round(index), 0, Math.max(0, n - 1)));
-  }, [n]);
+  const goToIndex = useCallback(
+    (index: number) => {
+      if (n <= 0) return;
+      setActiveIndex(clamp(Math.round(index), 0, Math.max(0, n - 1)));
+    },
+    [n],
+  );
 
   const stepBy = useCallback(
     (direction: 1 | -1) => {
@@ -337,7 +342,8 @@ export function ExperienceSection() {
       const sec = sectionRef.current;
       if (!sec) return;
       const r = sec.getBoundingClientRect();
-      const visible = r.top < window.innerHeight * 0.88 && r.bottom > window.innerHeight * 0.12;
+      const visible =
+        r.top < window.innerHeight * 0.88 && r.bottom > window.innerHeight * 0.12;
       if (!visible) return;
       e.preventDefault();
       stepBy(e.key === "ArrowDown" ? 1 : -1);
@@ -346,7 +352,9 @@ export function ExperienceSection() {
     return () => window.removeEventListener("keydown", onKey);
   }, [stepBy]);
 
-  const stripTransitionClass = reduceMotion ? "" : "transition-transform duration-500 ease-out";
+  const stripTransitionClass = reduceMotion
+    ? ""
+    : "transition-transform duration-500 ease-out";
 
   return (
     <section
@@ -367,7 +375,9 @@ export function ExperienceSection() {
             {t("experience.subtitle")}
           </p>
           {!reduceMotion && n > 1 ? (
-            <p className="mt-3 text-xs text-on-surface-variant/80 sm:text-sm">{t("experience.scrollHint")}</p>
+            <p className="mt-3 text-xs text-on-surface-variant/80 sm:text-sm">
+              {t("experience.scrollHint")}
+            </p>
           ) : null}
         </header>
 
@@ -396,7 +406,7 @@ export function ExperienceSection() {
               })}
             </nav>
 
-            {/* Viewport: fluid height (vh + caps); strip translateY uses ResizeObserver — CHANGED: no fixed 720px lock. */}
+            {/* Fluid viewport height (vh + caps); vertical position follows ResizeObserver measurements. */}
             <div
               ref={carouselViewportRef}
               className="relative min-w-0 flex-1 overflow-hidden rounded-xl border border-outline-variant/10 bg-surface-container/30"

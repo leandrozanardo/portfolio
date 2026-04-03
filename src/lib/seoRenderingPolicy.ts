@@ -1,6 +1,5 @@
 /**
- * Documented SEO constraints for this Vite SPA + react-i18next setup.
- * CHANGED: plan items p1-hreflang-decision + p2-prerender — no runtime behavior; guides future work.
+ * Documented SEO constraints for this Vite SPA + react-i18next setup (reference for hreflang / prerender).
  */
 
 /** Locale is stored in localStorage, not in the URL — do not emit hreflang alternates for the same URL. */

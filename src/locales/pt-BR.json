@@ -91,6 +91,7 @@
     "outcome": "O que isso habilita",
     "stack": "Stack",
     "platforms": {
+      "imageAlt": "Composição visual representando plataformas web e entrega de produto.",
       "tag": "Liderança técnica",
       "title": "Plataformas e entrega de produto",
       "description": "Capacidade de conduzir decisões arquiteturais e a evolução de plataformas web complexas junto a times multifuncionais, com foco em qualidade, estabilidade operacional e ritmo sustentável de entrega.",
@@ -98,6 +99,7 @@
       "stack": "React, TypeScript, Node.js / NestJS, testes automatizados, AWS, CI/CD (GitHub Actions)"
     },
     "commerce": {
+      "imageAlt": "Composição visual representando e-commerce headless e integrações.",
       "tag": "Comércio digital",
       "title": "E-commerce headless e ecossistema de integrações",
       "description": "Domínio de arquiteturas de venda online desacopladas: catálogo, checkout e operações conectadas a meios de pagamento, logística e parceiros, com atenção a performance e manutenção.",
@@ -105,6 +107,7 @@
       "stack": "PHP / Laravel, REST APIs, MySQL / MariaDB, integrações de pagamento e logística"
     },
     "apis": {
+      "imageAlt": "Composição visual representando APIs, integrações e confiabilidade.",
       "tag": "Backend & operações",
       "title": "APIs, integrações e confiabilidade",
       "description": "Fortes habilidades em desenho e operação de APIs REST e GraphQL, serviços backend e fluxos de integração de missão crítica, com tratamento de erro disciplinado e visibilidade em produção.",
@@ -136,22 +139,46 @@
     "backend": {
       "title": "Back-end",
       "context": "Serviços, integrações e regras de negócio com foco em confiabilidade.",
-      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "REST API", "Microsserviços"]
+      "items": [
+        "Node.js / Express",
+        "NestJS",
+        "PHP / Laravel / CodeIgniter",
+        "REST API",
+        "Microsserviços"
+      ]
     },
     "infra": {
       "title": "Infraestrutura",
       "context": "Deploy, monitoramento e operação com visão de produção.",
-      "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observabilidade (APM, logs)"]
+      "items": [
+        "AWS / GCP",
+        "Docker / K8s",
+        "CI/CD (GitHub Actions)",
+        "Serverless",
+        "Observabilidade (APM, logs)"
+      ]
     },
     "database": {
       "title": "Banco de dados",
       "context": "Modelagem e persistência confiável como base de aplicações e integrações.",
-      "items": ["MySQL / MariaDB", "Microsoft SQL Server", "PostgreSQL", "MongoDB", "Redis"]
+      "items": [
+        "MySQL / MariaDB",
+        "Microsoft SQL Server",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ]
     },
     "design": {
       "title": "Design e ferramentas",
       "context": "Do conceito à entrega: prototipagem, visual e documentação alinhadas à engenharia.",
-      "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "Prototipagem UI/UX", "Documentação técnica"]
+      "items": [
+        "Figma / Google Stitch",
+        "Adobe Suite",
+        "Jira / Agile",
+        "Prototipagem UI/UX",
+        "Documentação técnica"
+      ]
     }
   },
   "value": {

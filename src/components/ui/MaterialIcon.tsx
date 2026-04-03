@@ -21,7 +21,10 @@ export function MaterialIcon({
     filled || color
       ? {
           ...(filled
-            ? { fontVariationSettings: "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24" as const }
+            ? {
+                fontVariationSettings:
+                  "'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24" as const,
+              }
             : {}),
           ...(color ? { color } : {}),
         }

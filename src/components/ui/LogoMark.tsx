@@ -5,7 +5,10 @@ type LogoMarkProps = {
 
 const LOGO_SRC = "/images/logo.png"; // Public asset; replaces former SVG mark
 
-export function LogoMark({ className = "size-6", "aria-hidden": ariaHidden = true }: LogoMarkProps) {
+export function LogoMark({
+  className = "size-6",
+  "aria-hidden": ariaHidden = true,
+}: LogoMarkProps) {
   return (
     <img
       src={LOGO_SRC}

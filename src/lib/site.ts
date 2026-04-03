@@ -1,6 +1,5 @@
 /**
- * Public site origin for canonical URLs and Open Graph absolute assets.
- * CHANGED: centralizes VITE_SITE_URL with safe runtime fallback for local preview.
+ * Public site origin for canonical URLs and Open Graph absolute assets (`VITE_SITE_URL`).
  */
 
 const trimTrailingSlash = (value: string): string =>

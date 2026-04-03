@@ -83,13 +83,7 @@ export const EXPERIENCES_PT_BR: readonly ExperienceEntry[] = [
       "Implementei sistemas e interfaces que apoiaram a digitalização de processos e a operação dos clientes.",
       "Conduzi entregas com autonomia, organização e foco em prazo.",
     ],
-    technologies: [
-      "React",
-      "React Native",
-      "Laravel",
-      "AWS",
-      "APIs",
-    ],
+    technologies: ["React", "React Native", "Laravel", "AWS", "APIs"],
   },
   {
     id: "print-one",

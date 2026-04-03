@@ -13,8 +13,7 @@ function readSavedLocale(): LocaleCode {
 }
 
 function setDocumentLang(lng: string): void {
-  const html =
-    lng === "pt-BR" ? "pt-BR" : lng === "es" ? "es" : "en";
+  const html = lng === "pt-BR" ? "pt-BR" : lng === "es" ? "es" : "en";
   document.documentElement.setAttribute("lang", html);
 }
 

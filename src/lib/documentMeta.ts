@@ -1,6 +1,5 @@
 /**
- * Updates or creates <link> / <meta> nodes for SEO and social previews.
- * CHANGED: added for client-side SPA meta synchronization with i18n and canonical URL.
+ * Updates or creates <link> / <meta> nodes for SEO and social previews (SPA + i18n).
  */
 
 export function setLinkCanonical(href: string): void {

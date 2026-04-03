@@ -20,9 +20,7 @@ export function SiteFooter() {
             <div className="size-16 shrink-0">
               <LogoMark className="size-16" />
             </div>
-            <span className="font-bold text-on-surface">
-              {t("brand.fullName")}
-            </span>
+            <span className="font-bold text-on-surface">{t("brand.fullName")}</span>
           </div>
           <p className="text-xs text-outline">{t("footer.rights")}</p>
         </div>

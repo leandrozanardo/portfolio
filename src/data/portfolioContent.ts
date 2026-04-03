@@ -1,4 +1,4 @@
-/** Hero + cases + about: self-hosted under public/images — CHANGED: local hero for LCP (same origin) */
+/** Hero, case-study, and about imagery live under `public/images` (same-origin for LCP). */
 
 export const IMAGES = {
   heroWorkspace: "/images/hero-workspace.jpg",
@@ -42,12 +42,7 @@ export const CASE_STUDIES: CaseStudyVisual[] = [
   },
 ];
 
-export type StackCategoryId =
-  | "frontend"
-  | "backend"
-  | "infra"
-  | "database"
-  | "design";
+export type StackCategoryId = "frontend" | "backend" | "infra" | "database" | "design";
 
 export type StackCategoryMeta = {
   id: StackCategoryId;

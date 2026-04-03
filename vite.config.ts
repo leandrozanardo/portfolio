@@ -18,20 +18,14 @@ export default defineConfig(({ mode }) => {
         transformIndexHtml(html) {
           if (!siteUrl) {
             return html
-              .replace(
-                /<!-- built-seo-start -->[\s\S]*?<!-- built-seo-end -->\s*/g,
-                ""
-              )
-              .replace(
-                /<!-- fallback-seo-relative-start:[\s\S]*?-->\s*/g,
-                ""
-              )
+              .replace(/<!-- built-seo-start -->[\s\S]*?<!-- built-seo-end -->\s*/g, "")
+              .replace(/<!-- fallback-seo-relative-start:[\s\S]*?-->\s*/g, "")
               .replace(/\s*<!-- fallback-seo-relative-end -->\s*/g, "\n");
           }
           return html
             .replace(
               /<!-- fallback-seo-relative-start:[\s\S]*?<!-- fallback-seo-relative-end -->\s*/g,
-              ""
+              "",
             )
             .replace(/%SITE_URL%/g, siteUrl)
             .replace(/<!-- built-seo-start -->\s*/g, "")
