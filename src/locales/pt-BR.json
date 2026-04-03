@@ -130,22 +130,27 @@
     "subtitle": "Minha stack técnica é curada para escalabilidade, manutenção e performance.",
     "frontend": {
       "title": "Front-end",
+      "context": "Interfaces robustas, performáticas e escaláveis para produtos web.",
       "items": ["React / Next.js", "Angular", "TypeScript", "Tailwind CSS", "Bootstrap"]
     },
     "backend": {
       "title": "Back-end",
-      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "GraphQL / REST API", "Microsserviços"]
+      "context": "Serviços, integrações e regras de negócio com foco em confiabilidade.",
+      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "REST API", "Microsserviços"]
     },
     "infra": {
       "title": "Infraestrutura",
+      "context": "Deploy, monitoramento e operação com visão de produção.",
       "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observabilidade (APM, logs)"]
     },
     "database": {
       "title": "Banco de dados",
-      "items": ["PostgreSQL", "MySQL / MariaDB", "MongoDB", "Redis", "Microsoft SQL Server"]
+      "context": "Modelagem e persistência confiável como base de aplicações e integrações.",
+      "items": ["MySQL / MariaDB", "Microsoft SQL Server", "PostgreSQL", "MongoDB", "Redis"]
     },
     "design": {
       "title": "Design e ferramentas",
+      "context": "Do conceito à entrega: prototipagem, visual e documentação alinhadas à engenharia.",
       "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "Prototipagem UI/UX", "Documentação técnica"]
     }
   },

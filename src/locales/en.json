@@ -130,22 +130,27 @@
     "subtitle": "My technical stack is curated for scalability, maintainability, and performance.",
     "frontend": {
       "title": "Frontend",
+      "context": "Robust, performant, scalable interfaces for web products.",
       "items": ["React / Next.js", "Angular", "TypeScript", "Tailwind CSS", "Bootstrap"]
     },
     "backend": {
       "title": "Backend",
-      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "GraphQL / REST API", "Microservices"]
+      "context": "Services, integrations, and business rules with a reliability focus.",
+      "items": ["Node.js / Express", "NestJS", "PHP / Laravel / CodeIgniter", "REST API", "Microservices"]
     },
     "infra": {
       "title": "Infrastructure",
+      "context": "Deploy, monitoring, and operations with a production mindset.",
       "items": ["AWS / GCP", "Docker / K8s", "CI/CD (GitHub Actions)", "Serverless", "Observability (APM, logs)"]
     },
     "database": {
       "title": "Databases",
-      "items": ["PostgreSQL", "MySQL / MariaDB", "MongoDB", "Redis", "Microsoft SQL Server"]
+      "context": "Modeling and dependable persistence as the foundation for apps and integrations.",
+      "items": ["MySQL / MariaDB", "Microsoft SQL Server", "PostgreSQL", "MongoDB", "Redis"]
     },
     "design": {
       "title": "Design & Tools",
+      "context": "From concept to handoff—prototyping, visuals, and docs aligned with engineering.",
       "items": ["Figma / Google Stitch", "Adobe Suite", "Jira / Agile", "UI/UX Prototyping", "Technical Writing"]
     }
   },

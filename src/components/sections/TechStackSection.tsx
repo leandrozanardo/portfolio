@@ -61,6 +61,10 @@ function StackCategoryCard({ meta }: { meta: StackCategoryMeta }) {
           </li>
         ))}
       </ul>
+      {/* One-line usage context below skill list (italic, not a list item). */}
+      <p className="text-xs italic leading-relaxed text-outline">
+        {t(`stack.${id}.context`)}
+      </p>
     </div>
   );
 }
