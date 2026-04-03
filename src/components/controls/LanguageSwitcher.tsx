@@ -39,8 +39,7 @@ export function LanguageSwitcher() {
   const resolved = i18n.resolvedLanguage ?? i18n.language;
   const activeLocale = LOCALES.find((l) => l.code === resolved) ?? LOCALES[0]!;
   const ActiveFlag = activeLocale.Flag;
-
-  // CHANGED: close dropdown on outside click (dropdown trigger shows only active locale).
+  
   useEffect(() => {
     if (!open) return;
     const onDoc = (e: MouseEvent) => {
@@ -50,7 +49,6 @@ export function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  // CHANGED: Escape closes language menu.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {

@@ -79,6 +79,8 @@ export function HeroSection() {
                 className="h-full w-full object-cover opacity-80 grayscale"
                 width={600}
                 height={600}
+                sizes="(max-width: 1024px) 90vw, 600px"
+                decoding="async"
                 loading="eager"
                 fetchPriority="high"
               />

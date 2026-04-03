@@ -1,7 +1,7 @@
 export const THEME_STORAGE_KEY = "portfolio-theme" as const;
 export const LOCALE_STORAGE_KEY = "portfolio-locale" as const;
 
-export const CV_PATH = "/docs/CV.docx" as const; // CHANGED: resume asset lives under public/docs as Word doc
+export const CV_PATH = "/docs/CV.docx" as const;
 
 export const CONTACT_MAILTO = "mailto:leandrozanardo@gmail.com" as const;
 

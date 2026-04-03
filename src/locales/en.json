@@ -32,6 +32,25 @@
     "portfolio": "Portfolio",
     "fullName": "Leandro Zanardo"
   },
+  "seo": {
+    "title": "Leandro Zanardo — Full-Stack Engineer | Portfolio",
+    "description": "Senior full-stack engineer, 10+ years: React, TypeScript, Node/NestJS, AWS, headless commerce, APIs. Brazil — available worldwide.",
+    "keywords": "Leandro Zanardo, full-stack engineer, React developer, TypeScript, Node.js, NestJS, AWS, portfolio, technical leadership, headless commerce, APIs",
+    "jobTitle": "Senior Full-Stack Software Engineer",
+    "ogImageAlt": "Leandro Zanardo — full-stack software engineer portfolio",
+    "knowsAbout": [
+      "Full-stack web development",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "NestJS",
+      "REST APIs",
+      "AWS",
+      "E-commerce",
+      "Software architecture",
+      "UI/UX"
+    ]
+  },
   "nav": {
     "projects": "Strengths",
     "experience": "Experience",
@@ -164,7 +183,7 @@
     "availabilityValue": "To be discussed"
   },
   "footer": {
-    "rights": "© 2024 LZ Engineering. Built with precision.",
+    "rights": "© 2026 LZ Engineering. Built with precision.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "whatsapp": "WhatsApp",

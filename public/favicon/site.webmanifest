@@ -1,6 +1,7 @@
 {
-  "name": "LZ Portfolio",
+  "name": "Leandro Zanardo — Portfolio",
   "short_name": "LZ Portfolio",
+  "description": "Full-stack software engineer portfolio — React, TypeScript, Node.js, AWS, and technical leadership.",
   "start_url": "/",
   "scope": "/",
   "icons": [

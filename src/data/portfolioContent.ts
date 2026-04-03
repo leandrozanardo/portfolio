@@ -1,8 +1,7 @@
-/** Hero uses legacy URL; case studies + about use public/images */
+/** Hero + cases + about: self-hosted under public/images — CHANGED: local hero for LCP (same origin) */
 
 export const IMAGES = {
-  heroWorkspace:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB-eEFXbdoQDYuG-p5SWC4POWWKAzJMhhpDwQ8ZE12KudWOOHnbMvpc5SPm_NjPW7toRpTDmWn3YyndYvhnPnNB58L2T2ypdyiiShyYOrxsnUcdWl4RowuHImItgfZ0MA5zCG60Q0qxgDW-TsX_lkLquvZZQn4AlMb9A1MMP2Gh95oQcHz54eTYSbLzxc4iJ-gHAlLUL2eNJpp5zmhDESa2VcgDdPYxK7EFtO6G409HsU23w4-vfr1kXOedwfrlyaZe8rfNrFa5zblA",
+  heroWorkspace: "/images/hero-workspace.jpg",
   /** 1st card — digital platforms / senior delivery */
   caseEnterprise: "/images/case-enterprise.png",
   /** 2nd card — headless commerce & integrations */

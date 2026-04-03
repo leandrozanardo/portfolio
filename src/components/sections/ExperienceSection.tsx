@@ -192,9 +192,10 @@ function ExperienceCardBody({
           className={isPinned ? "min-h-0 overflow-hidden" : ""}
           aria-label={labels.responsibilities}
         >
-          <h4 className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-outline">
+          {/* CHANGED: label is not a heading — outline stays H2 (section) → H3 (role) for SEO */}
+          <p className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-outline">
             {labels.responsibilities}
-          </h4>
+          </p>
           <ul
             className={`list-disc space-y-1.5 pl-4 text-[12px] leading-snug text-on-surface/95 sm:text-[13px] sm:leading-relaxed ${
               isPinned ? "overflow-hidden" : "space-y-3"
@@ -210,9 +211,9 @@ function ExperienceCardBody({
           className={isPinned ? "min-h-0 overflow-hidden" : ""}
           aria-label={labels.keyResults}
         >
-          <h4 className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-primary">
+          <p className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-primary">
             {labels.keyResults}
-          </h4>
+          </p>
           <ul
             className={`list-disc space-y-1.5 pl-4 text-[12px] leading-snug text-on-surface/95 sm:text-[13px] sm:leading-relaxed ${
               isPinned ? "overflow-hidden" : "space-y-3"
@@ -229,9 +230,9 @@ function ExperienceCardBody({
         className={`shrink-0 pt-1 ${isPinned ? "overflow-hidden" : ""}`}
         aria-label={labels.technologies}
       >
-        <h4 className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-outline">
+        <p className="mb-2 text-[9px] font-black uppercase tracking-[0.2em] text-outline">
           {labels.technologies}
-        </h4>
+        </p>
         <ul
           className={`flex flex-wrap gap-1.5 ${isPinned ? "max-h-[4.5rem] overflow-hidden sm:max-h-[5rem]" : ""}`}
         >
