@@ -155,7 +155,7 @@
         "AWS / GCP",
         "Docker / K8s",
         "CI/CD (GitHub Actions)",
-        "Serverless",
+        "TDD / BDD / SDD",
         "Observability (APM, logs)"
       ]
     },
@@ -202,7 +202,7 @@
     },
     "alignment": {
       "title": "Business, quality & teamwork",
-      "body": "Code review, stakeholder alignment, turning requests into fit-for-purpose delivery, and close collaboration with engineering and product — including regular interface with customer-success-style teams plus prioritization, acceptance criteria, and backlog ownership when the context calls for a hybrid technical-product role."
+      "body": "Code review, stakeholder alignment, turning requests into fit-for-purpose delivery, and close collaboration with engineering and product — including regular interface with customer-success-style teams plus prioritization, acceptance criteria, and backlog ownership when the context calls for a hybrid technical-product role. I work with TDD, BDD, and specification-driven development (SDD) so specs, behavior, and tests stay aligned from discovery through release."
     },
     "ux": {
       "title": "UI/UX & usable product",

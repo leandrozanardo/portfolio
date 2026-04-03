@@ -155,7 +155,7 @@
         "AWS / GCP",
         "Docker / K8s",
         "CI/CD (GitHub Actions)",
-        "Serverless",
+        "TDD / BDD / SDD",
         "Observabilidad (APM, logs)"
       ]
     },
@@ -202,7 +202,7 @@
     },
     "alignment": {
       "title": "Negocio, calidad y equipo",
-      "body": "Code review, alineación con stakeholders, traducción de demandas en entregas adecuadas y colaboración con producto e ingeniería — incluyendo interfaz con equipos de éxito del cliente, priorización, criterios de aceptación y ownership del backlog cuando el contexto requiere un rol híbrido técnico-producto."
+      "body": "Code review, alineación con stakeholders, traducción de demandas en entregas adecuadas y colaboración con producto e ingeniería — incluyendo interfaz con equipos de éxito del cliente, priorización, criterios de aceptación y ownership del backlog cuando el contexto requiere un rol híbrido técnico-producto. Trabajo con TDD, BDD y desarrollo guiado por especificación (SDD) para mantener alineadas la especificación, el comportamiento y las pruebas, desde el descubrimiento hasta el release."
     },
     "ux": {
       "title": "UI/UX y producto usable",
