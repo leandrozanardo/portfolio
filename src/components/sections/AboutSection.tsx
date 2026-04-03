@@ -7,7 +7,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-surface px-4 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
+      className="bg-surface-container-lowest px-4 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">

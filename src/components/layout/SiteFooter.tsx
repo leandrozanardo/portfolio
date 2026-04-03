@@ -13,7 +13,7 @@ export function SiteFooter() {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-outline-variant/10 bg-surface-container-lowest px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
+    <footer className="border-t border-outline-variant/10 bg-surface px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
       <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-10 md:flex-row md:gap-12">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <div className="flex items-center justify-center gap-2 md:justify-start">

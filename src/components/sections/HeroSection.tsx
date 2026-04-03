@@ -9,7 +9,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex min-h-[min(819px,100svh)] items-center overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
+      className="relative flex min-h-[min(819px,100svh)] items-center overflow-hidden bg-surface-container-lowest px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24"
       aria-labelledby="hero-heading"
     >
       <div className="hero-glow absolute inset-0 -z-10" aria-hidden />
