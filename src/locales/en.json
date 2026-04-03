@@ -60,10 +60,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "titleBefore": "Full-Stack Software Engineer building",
-    "titleHighlight": "modern, scalable,",
-    "titleAfter": "user-centered digital products.",
-    "subtitle": "I help teams ship and sustain demanding products—less rework, more predictability, and a technical foundation ready for what comes next.",
+    "titleBefore": "Full-Stack Software Engineer bringing together",
+    "titleHighlight": "solid architecture, performance, and user experience",
+    "titleAfter": "in modern digital products.",
+    "subtitle": "Over 10 years building web applications, APIs, enterprise systems, dashboards, and e-commerce, with experience in legacy modernization, observability, integrations, and product evolution.",
     "ctaCaseStudies": "View strengths",
     "ctaResume": "Download Resume",
     "connect": "Connect:",
