@@ -26,7 +26,8 @@
     "openWhatsApp": "Abrir chat de WhatsApp con Leandro Zanardo",
     "heroWorkspace": "Espacio de desarrollo moderno con varios monitores mostrando código en un estudio minimalista",
     "caseStudyDecorative": "Visual abstracto del caso de estudio",
-    "aboutPortrait": "Ilustración digital de un hombre profesional con traje oscuro y corbata negra sobre fondo negro"
+    "aboutPortrait": "Ilustración digital de un hombre profesional con traje oscuro y corbata negra sobre fondo negro",
+    "notFoundIllustration": "Ilustración de página no encontrada: desarrollador sorprendido frente a un monitor con error 404 y un pequeño robot en el escritorio."
   },
   "brand": {
     "portfolio": "Portfolio",
@@ -257,6 +258,11 @@
     "locationGlobal": "(disponible globalmente)",
     "availabilityLabel": "Disponibilidad",
     "availabilityValue": "A convenir"
+  },
+  "notFound": {
+    "seoTitle": "Página no encontrada — Leandro Zanardo",
+    "headline": "Esta página no existe.",
+    "ctaHome": "Volver al inicio"
   },
   "footer": {
     "rights": "© 2026 LZ Engineering. Construido con precisión.",

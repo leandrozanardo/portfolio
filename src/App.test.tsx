@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { StrictMode, type ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
+import { MemoryRouter } from "react-router-dom";
 import { beforeAll, describe, expect, it } from "vitest";
 import App from "./App";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -10,11 +11,19 @@ beforeAll(async () => {
   await i18nInitPromise;
 });
 
-function Providers({ children }: { children: ReactNode }) {
+function Providers({
+  children,
+  initialEntries = ["/"],
+}: {
+  children: ReactNode;
+  initialEntries?: string[];
+}) {
   return (
     <StrictMode>
       <I18nextProvider i18n={i18n}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <MemoryRouter initialEntries={initialEntries}>{children}</MemoryRouter>
+        </ThemeProvider>
       </I18nextProvider>
     </StrictMode>
   );
@@ -51,5 +60,19 @@ describe("App", () => {
       </Providers>,
     );
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
+  });
+
+  it("renders not found page for unknown routes", () => {
+    render(
+      <Providers initialEntries={["/rota-que-nao-existe"]}>
+        <App />
+      </Providers>,
+    );
+    expect(
+      screen.getByRole("link", {
+        name: /Voltar ao início|Back to home|Volver al inicio/i,
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByRole("status")).toBeInTheDocument();
   });
 });
