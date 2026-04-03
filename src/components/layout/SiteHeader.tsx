@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useId, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { CONTACT_MAILTO, CV_PATH, SOCIAL_URLS } from "../../lib/constants";
 import { LanguageSwitcher } from "../controls/LanguageSwitcher";
 import { ThemeToggle } from "../controls/ThemeToggle";
-import { LinkedInIcon } from "../ui/LinkedInIcon";
 import { LogoMark } from "../ui/LogoMark";
+import { HeaderContactMenu } from "./HeaderContactMenu";
 import { SkipLink } from "./SkipLink";
 
 const NAV_LINKS = [
@@ -66,28 +65,7 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex xl:gap-4">
-            <a
-              href={CV_PATH}
-              download
-              className="flex rounded-lg bg-primary-container px-4 py-2.5 text-sm font-bold tracking-wide text-on-primary-fixed transition-all hover:shadow-[0_0_15px_rgba(179,197,255,0.3)] xl:px-5"
-            >
-              {t("nav.resume")}
-            </a>
-            <a
-              href={CONTACT_MAILTO}
-              className="flex rounded-lg bg-surface-container-high px-4 py-2.5 text-sm font-bold tracking-wide text-on-surface ghost-border transition-all xl:px-5"
-            >
-              {t("nav.contact")}
-            </a>
-            <a
-              href={SOCIAL_URLS.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center rounded-lg bg-surface-container-high p-2.5 text-on-surface ghost-border transition-all hover:text-primary"
-              aria-label={t("a11y.linkedinProfile")}
-            >
-              <LinkedInIcon />
-            </a>
+            <HeaderContactMenu layout="dropdown" />
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
@@ -138,31 +116,7 @@ export function SiteHeader() {
                 </a>
               ))}
             </nav>
-            <a
-              href={CV_PATH}
-              download
-              className="flex justify-center rounded-lg bg-primary-container py-3 text-sm font-bold text-on-primary-fixed"
-              onClick={closeMenu}
-            >
-              {t("nav.resume")}
-            </a>
-            <a
-              href={CONTACT_MAILTO}
-              className="flex justify-center rounded-lg bg-surface-container-high py-3 text-sm font-bold text-on-surface ghost-border"
-              onClick={closeMenu}
-            >
-              {t("nav.contact")}
-            </a>
-            <a
-              href={SOCIAL_URLS.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-lg bg-surface-container-high py-3 text-on-surface ghost-border"
-              aria-label={t("a11y.linkedinProfile")}
-            >
-              <LinkedInIcon />
-              <span className="text-sm font-medium">{t("footer.linkedin")}</span>
-            </a>
+            <HeaderContactMenu layout="stacked" onNavigate={closeMenu} />
           </div>
         </div>
       ) : null}
