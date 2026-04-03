@@ -83,19 +83,16 @@
   },
   "experience": {
     "title": "Trayectoria profesional",
-    "subtitle": "Una década de crecimiento desde agencias boutique hasta liderazgo en ingeniería enterprise.",
-    "job1": {
-      "period": "2018 — Presente",
-      "role": "Ingeniero full-stack senior",
-      "company": "INEX Digital Solutions",
-      "description": "Lideré decisiones arquitectónicas en equipos multifuncionales, entregando plataformas digitales críticas. Mentoría a juniors e implementación de CI/CD que redujo errores de despliegue un 60%."
+    "subtitle": "Experiencia real, en orden cronológico inverso: del contexto actual en capitalización y modernización de legado hasta la base en diseño y entrega digital.",
+    "labels": {
+      "responsibilities": "Actuación y responsabilidades",
+      "keyResults": "Principales resultados",
+      "technologies": "Tecnologías y herramientas"
     },
-    "job2": {
-      "period": "2015 — 2018",
-      "role": "Arquitecto de software",
-      "company": "Propaganda Store",
-      "description": "Impulsé el desarrollo de un motor de e-commerce headless. Enfoque en rendimiento e integración con logística y pasarelas de pago."
-    }
+    "scrollHint": "Usa los puntos a la izquierda para cambiar la experiencia en el marco. Con la sección visible, usa ↑ ↓ para avanzar o retroceder.",
+    "progressNavLabel": "Progreso de la trayectoria",
+    "jumpToLabel": "Ir a la experiencia en {{company}}",
+    "carouselStatus": "Experiencia {{current}} de {{total}}: {{company}}"
   },
   "stack": {
     "title": "La sala de máquinas",

@@ -82,20 +82,17 @@
     }
   },
   "experience": {
-    "title": "Professional Journey",
-    "subtitle": "A decade of progressive growth from boutique agencies to enterprise engineering leadership.",
-    "job1": {
-      "period": "2018 — Present",
-      "role": "Senior Full-Stack Engineer",
-      "company": "INEX Digital Solutions",
-      "description": "Led architectural decisions for cross-functional teams, overseeing the delivery of high-stakes digital platforms. Mentored junior developers and implemented CI/CD pipelines that reduced deployment errors by 60%."
+    "title": "Professional journey",
+    "subtitle": "Real roles in reverse chronological order — from capitalization and legacy modernization today back through product engineering and design foundations.",
+    "labels": {
+      "responsibilities": "Role & responsibilities",
+      "keyResults": "Key results",
+      "technologies": "Technologies & tools"
     },
-    "job2": {
-      "period": "2015 — 2018",
-      "role": "Software Architect",
-      "company": "Propaganda Store",
-      "description": "Spearheaded the development of a headless e-commerce engine. Focused on performance optimization and integrating third-party logistics and payment gateways."
-    }
+    "scrollHint": "Use the dots on the left to change the role shown in the frame. When this section is in view, use the ↑ ↓ keys to step between roles.",
+    "progressNavLabel": "Journey progress",
+    "jumpToLabel": "Jump to experience at {{company}}",
+    "carouselStatus": "Experience {{current}} of {{total}}: {{company}}"
   },
   "stack": {
     "title": "The Engine Room",
