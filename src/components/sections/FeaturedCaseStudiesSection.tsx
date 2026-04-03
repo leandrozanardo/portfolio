@@ -5,10 +5,14 @@ import {
   type CaseStudyVisual,
 } from "../../data/portfolioContent";
 
+/** Tag colors from global.css (--c-case-tag-*); light = vibrant, dark = theme tokens. */
 const TAG_STYLES = {
-  primary: "text-primary border-primary/30",
-  secondary: "text-secondary border-secondary/30",
-  tertiary: "text-tertiary border-tertiary/30",
+  primary:
+    "text-[rgb(var(--c-case-tag-primary))] border-[rgb(var(--c-case-tag-primary)_/_0.35)]",
+  secondary:
+    "text-[rgb(var(--c-case-tag-secondary))] border-[rgb(var(--c-case-tag-secondary)_/_0.35)]",
+  tertiary:
+    "text-[rgb(var(--c-case-tag-tertiary))] border-[rgb(var(--c-case-tag-tertiary)_/_0.35)]",
 } as const;
 
 export function FeaturedCaseStudiesSection() {

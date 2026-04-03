@@ -75,11 +75,8 @@ export function LanguageSwitcher() {
         aria-label={open ? t("a11y.closeLanguageMenu") : t("a11y.openLanguageMenu")}
         onClick={() => setOpen((o) => !o)}
       >
-        <span
-          className="flex size-8 items-center justify-center rounded-md bg-primary-container/40 ring-1 ring-primary/30"
-          aria-hidden
-        >
-          <span className="size-5 overflow-hidden rounded-sm shadow-sm">
+        <span className="flex size-8 shrink-0 items-center justify-center" aria-hidden>
+          <span className="size-5 overflow-hidden rounded-sm">
             <ActiveFlag />
           </span>
         </span>

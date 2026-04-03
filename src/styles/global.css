@@ -77,12 +77,23 @@
   --c-about-portrait-overlay-from: 14 14 14;
   /* AboutSection: rgb(var(--c-about-subtitle-emphasis)) */
   --c-about-subtitle-emphasis: var(--color-light-about-subtitle);
-  /* Stack section: five hues; midpoint between vivid pastel and ultra-muted (readable, still soft). */
-  --c-stack-accent-0: 153 180 225;
-  --c-stack-accent-1: 187 168 219;
-  --c-stack-accent-2: 218 178 177;
-  --c-stack-accent-3: 183 190 152;
-  --c-stack-accent-4: 152 198 192;
+  /* Stack section: five hues (~72°); light theme more saturated so icons read on pale cards (dark: .dark block). */
+  --c-stack-accent-0: 105 145 235;
+  --c-stack-accent-1: 145 98 218;
+  --c-stack-accent-2: 218 118 112;
+  --c-stack-accent-3: 132 158 68;
+  --c-stack-accent-4: 48 172 162;
+  /* Value proposition icons (glyph); light = more saturated than former inline pastels. */
+  --c-value-prop-icon-alignment: 198 118 78;
+  --c-value-prop-icon-fullstack: 108 78 218;
+  --c-value-prop-icon-ux: 168 78 198;
+  --c-value-prop-icon-reliability: 32 152 144;
+  --c-value-prop-icon-observability: 22 118 210;
+  --c-value-prop-icon-legacy: 72 98 205;
+  /* Case study card tags (#projects); light = more saturated than global primary/secondary/tertiary chips. */
+  --c-case-tag-primary: 58 100 235;
+  --c-case-tag-secondary: 118 48 205;
+  --c-case-tag-tertiary: 198 95 18;
 }
 
 .dark {
@@ -153,6 +164,17 @@
   --c-stack-accent-2: 179 143 143;
   --c-stack-accent-3: 154 162 126;
   --c-stack-accent-4: 121 165 158;
+  /* Value proposition icons: original soft pastels (unchanged from prior inline RGB). */
+  --c-value-prop-icon-alignment: 188 124 98;
+  --c-value-prop-icon-fullstack: 98 88 195;
+  --c-value-prop-icon-ux: 158 108 176;
+  --c-value-prop-icon-reliability: 56 142 136;
+  --c-value-prop-icon-observability: 44 132 205;
+  --c-value-prop-icon-legacy: 88 108 178;
+  /* Case study tags: keep Material primary / secondary / tertiary (same as rest of dark UI). */
+  --c-case-tag-primary: 179 197 255;
+  --c-case-tag-secondary: 208 188 255;
+  --c-case-tag-tertiary: 255 181 149;
 }
 
 @layer base {

@@ -25,7 +25,7 @@ export function ValuePropositionSection() {
           className="m-0 grid list-none grid-cols-1 gap-10 p-0 sm:grid-cols-2 xl:grid-cols-3 xl:gap-12"
         >
           {VALUE_PROPOSITION_CARDS.map(({ key, icon }) => {
-            const { iconColor } = getValuePropositionIconAccent(key); // pastel RGB on span only
+            const { iconColor } = getValuePropositionIconAccent(key); // theme token → rgb(var(--...))
             return (
               <li key={key} className="space-y-4">
                 <div className="flex size-12 items-center justify-center rounded-lg bg-surface-container-high ghost-border">

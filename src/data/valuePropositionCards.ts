@@ -1,4 +1,4 @@
-/** Pastel RGB for the Material Symbol glyph only (tile stays neutral). */
+/** Icon fill for Material Symbol (tile stays neutral); RGB via CSS vars — light/dark in global.css. */
 export type ValuePropositionIconAccent = {
   iconColor: string;
 };
@@ -15,17 +15,18 @@ export const VALUE_PROPOSITION_CARDS = [
 
 export type ValuePropositionCardKey = (typeof VALUE_PROPOSITION_CARDS)[number]["key"];
 
-/** Thematic pastel icon hues — legacy, trust, monitoring, stack, people, design. */
-const ICON_ACCENTS: Record<ValuePropositionCardKey, ValuePropositionIconAccent> = {
-  legacy: { iconColor: "rgb(88, 108, 178)" },
-  reliability: { iconColor: "rgb(56, 142, 136)" },
-  observability: { iconColor: "rgb(44, 132, 205)" },
-  fullstack: { iconColor: "rgb(98, 88, 195)" },
-  alignment: { iconColor: "rgb(188, 124, 98)" },
-  ux: { iconColor: "rgb(158, 108, 176)" },
+/** Maps card key to theme token (space-separated R G B in :root / .dark). */
+const ICON_CSS_VARS: Record<ValuePropositionCardKey, string> = {
+  alignment: "--c-value-prop-icon-alignment",
+  fullstack: "--c-value-prop-icon-fullstack",
+  ux: "--c-value-prop-icon-ux",
+  reliability: "--c-value-prop-icon-reliability",
+  observability: "--c-value-prop-icon-observability",
+  legacy: "--c-value-prop-icon-legacy",
 };
 
-/** Resolves pastel color for the card icon glyph. */
+/** Resolves icon color for the card glyph (inline style rgb(var(--token))). */
 export function getValuePropositionIconAccent(key: ValuePropositionCardKey): ValuePropositionIconAccent {
-  return ICON_ACCENTS[key];
+  const token = ICON_CSS_VARS[key];
+  return { iconColor: `rgb(var(${token}))` };
 }
