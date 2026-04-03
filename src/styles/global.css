@@ -4,64 +4,79 @@
 
 /* Light theme (:root) — dark uses .dark overrides */
 :root {
+  /* ----- Light brand (space-separated R G B for rgb(var(--x) / a)) — edit only below ----- */
+  --color-light-brand-primary: 77 111 215;
+  /* Hero radial glow: same hue, lifted for a soft wash (tweak without touching components). */
+  --color-light-brand-glow: 139 163 229;
+  /* About subtitle; default = brand primary. */
+  --color-light-about-subtitle: var(--color-light-brand-primary);
+  /* Maps to Tailwind `primary` / `on-primary-*` / surface tint (single source of truth). */
+  --c-accent-emphasis: var(--color-light-brand-primary);
+  /* ----- /Light brand ----- */
+
+  /* ----- Light surfaces (wider steps than stock M3 so section bands read on bright monitors) ----- */
+  --c-surface-container-lowest: 247 248 252;
+  --c-surface-bright: 255 255 255;
+  --c-background: 247 248 252;
+  --c-surface: 236 239 246;
+  --c-surface-container-low: 228 232 240;
+  --c-surface-container: 222 226 235;
+  --c-surface-container-high: 216 220 230;
+  --c-surface-container-highest: 210 214 225;
+  --c-surface-variant: 212 216 226;
+  --c-surface-dim: 200 204 214;
+  /* ----- /Light surfaces ----- */
+
   --c-on-error: 145 0 8;
   --c-outline-variant: 196 199 212;
-  --c-surface-dim: 218 218 224;
   --c-secondary-fixed: 230 223 255;
   --c-tertiary: 154 68 0;
   --c-primary-fixed-dim: 179 197 255;
-  --c-surface-container-low: 243 243 248;
   --c-on-secondary-fixed-variant: 81 56 120;
   --c-on-surface-variant: 68 71 79;
-  --c-surface-tint: 0 85 213;
+  --c-surface-tint: var(--c-accent-emphasis);
   --c-on-primary: 255 255 255;
   --c-on-background: 26 27 31;
-  --c-surface: 251 251 253;
-  --c-surface-container-highest: 226 226 234;
   --c-on-secondary-fixed: 39 0 92;
   --c-on-secondary: 255 255 255;
   --c-primary-fixed: 218 226 255;
   --c-secondary-container: 232 222 255;
   --c-inverse-surface: 49 48 51;
-  --c-surface-bright: 255 255 255;
   --c-on-tertiary-fixed: 50 19 0;
   --c-on-surface: 26 27 31;
   --c-tertiary-fixed: 255 219 200;
   --c-inverse-primary: 179 197 255;
   --c-error: 186 26 26;
-  --c-on-primary-container: 0 27 77;
+  --c-on-primary-container: var(--c-accent-emphasis);
   --c-on-tertiary: 255 255 255;
-  --c-surface-container-high: 235 235 242;
   --c-on-tertiary-container: 126 55 0;
-  --c-surface-variant: 226 226 234;
-  --c-surface-container: 239 239 245;
   --c-tertiary-fixed-dim: 255 181 149;
   --c-secondary: 95 61 176;
-  --c-on-primary-fixed-variant: 0 40 120;
+  --c-on-primary-fixed-variant: var(--c-accent-emphasis);
   --c-primary-container: 217 226 255;
   --c-error-container: 255 218 214;
-  --c-primary: 0 85 213;
+  --c-primary: var(--c-accent-emphasis);
   --c-secondary-fixed-dim: 208 193 255;
-  --c-surface-container-lowest: 255 255 255;
   --c-outline: 117 119 128;
   --c-inverse-on-surface: 245 239 247;
   --c-on-tertiary-fixed-variant: 124 45 0;
   --c-on-error-container: 65 0 2;
   --c-on-secondary-container: 50 0 120;
   --c-tertiary-container: 255 219 200;
-  --c-background: 249 249 252;
-  --c-on-primary-fixed: 0 24 73;
+  --c-on-primary-fixed: var(--c-accent-emphasis);
   --glass-nav-bg: rgba(255, 255, 255, 0.72);
   --glass-nav-border: rgba(65, 71, 85, 0.12);
   --ghost-border: rgba(65, 71, 85, 0.18);
-  --body-bg: 249 249 252;
-  --hero-glow-center: 94 139 255;
+  --body-bg: 247 248 252;
+  --hero-glow-center: var(--color-light-brand-glow);
   --gradient-text-from: 26 27 31;
   --gradient-text-to: 117 119 128;
   /* Fixed dark well for semi-transparent media thumbs; unchanged in .dark so light/dark match */
   --c-case-study-thumb-bg: 53 53 52;
-  /* About portrait bottom fade: same as .dark --c-surface-container-lowest (light theme was white) */
+  /* About portrait bottom fade: same as .dark --c-surface-container-lowest */
   --c-about-portrait-overlay-from: 14 14 14;
+  /* AboutSection: rgb(var(--c-about-subtitle-emphasis)) */
+  --c-about-subtitle-emphasis: var(--color-light-about-subtitle);
   /* Stack section: five hues; midpoint between vivid pastel and ultra-muted (readable, still soft). */
   --c-stack-accent-0: 153 180 225;
   --c-stack-accent-1: 187 168 219;
@@ -71,6 +86,12 @@
 }
 
 .dark {
+  /* ----- Dark brand (space-separated R G B) — edit only below ----- */
+  --color-dark-brand-primary: 179 197 255;
+  --color-dark-brand-glow: 94 139 255;
+  --color-dark-about-subtitle: var(--color-dark-brand-primary);
+  /* ----- /Dark brand ----- */
+
   --c-on-error: 105 0 5;
   --c-outline-variant: 65 71 85;
   --c-surface-dim: 19 19 19;
@@ -80,7 +101,7 @@
   --c-surface-container-low: 28 27 27;
   --c-on-secondary-fixed-variant: 85 22 190;
   --c-on-surface-variant: 193 198 215;
-  --c-surface-tint: 179 197 255;
+  --c-surface-tint: var(--color-dark-brand-primary);
   --c-on-primary: 0 43 117;
   --c-on-background: 229 226 225;
   --c-surface: 19 19 19;
@@ -107,7 +128,7 @@
   --c-on-primary-fixed-variant: 0 63 164;
   --c-primary-container: 94 139 255;
   --c-error-container: 147 0 10;
-  --c-primary: 179 197 255;
+  --c-primary: var(--color-dark-brand-primary);
   --c-secondary-fixed-dim: 208 188 255;
   --c-surface-container-lowest: 14 14 14;
   --c-outline: 139 144 160;
@@ -122,9 +143,10 @@
   --glass-nav-border: rgba(65, 71, 85, 0.15);
   --ghost-border: rgba(65, 71, 85, 0.15);
   --body-bg: 14 14 14;
-  --hero-glow-center: 94 139 255;
+  --hero-glow-center: var(--color-dark-brand-glow);
   --gradient-text-from: 229 226 225;
   --gradient-text-to: 139 144 160;
+  --c-about-subtitle-emphasis: var(--color-dark-about-subtitle);
   /* Stack accents: dark theme midpoint (between saturated pastel and flat gray). */
   --c-stack-accent-0: 128 150 182;
   --c-stack-accent-1: 155 142 179;

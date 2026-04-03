@@ -34,7 +34,7 @@ export function AboutSection() {
             >
               {t("about.title")}
             </h2>
-            <p className="text-lg font-bold text-primary sm:text-xl">
+            <p className="text-lg font-bold text-[rgb(var(--c-about-subtitle-emphasis))] sm:text-xl">
               {t("about.subtitle")}
             </p>
           </div>
