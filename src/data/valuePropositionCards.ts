@@ -5,12 +5,12 @@ export type ValuePropositionIconAccent = {
 
 /** Value proposition cards — single source of truth so all six render in the section grid. */
 export const VALUE_PROPOSITION_CARDS = [
-  { key: "legacy" as const, icon: "upgrade" },
+  { key: "alignment" as const, icon: "handshake" },
+  { key: "fullstack" as const, icon: "layers" },
+  { key: "ux" as const, icon: "design_services" },
   { key: "reliability" as const, icon: "verified_user" },
   { key: "observability" as const, icon: "monitoring" },
-  { key: "fullstack" as const, icon: "layers" },
-  { key: "alignment" as const, icon: "handshake" },
-  { key: "ux" as const, icon: "design_services" },
+  { key: "legacy" as const, icon: "upgrade" },
 ] as const;
 
 export type ValuePropositionCardKey = (typeof VALUE_PROPOSITION_CARDS)[number]["key"];
