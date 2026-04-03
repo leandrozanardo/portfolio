@@ -58,6 +58,10 @@
   --hero-glow-center: 94 139 255;
   --gradient-text-from: 26 27 31;
   --gradient-text-to: 117 119 128;
+  /* Fixed dark well for semi-transparent media thumbs; unchanged in .dark so light/dark match */
+  --c-case-study-thumb-bg: 53 53 52;
+  /* About portrait bottom fade: same as .dark --c-surface-container-lowest (light theme was white) */
+  --c-about-portrait-overlay-from: 14 14 14;
 }
 
 .dark {

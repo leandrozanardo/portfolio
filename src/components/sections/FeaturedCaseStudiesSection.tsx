@@ -53,7 +53,8 @@ function CaseStudyCard({ study }: { study: CaseStudyVisual }) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl bg-surface-container-low ghost-border transition-all hover:bg-surface-bright">
-      <div className="aspect-[16/10] overflow-hidden bg-surface-container-highest">
+      {/* case study thumb: fixed dark well so half-opacity image matches dark-theme blend in light mode */}
+      <div className="aspect-[16/10] overflow-hidden bg-[rgb(var(--c-case-study-thumb-bg))]">
         <img
           src={study.imageSrc}
           alt=""

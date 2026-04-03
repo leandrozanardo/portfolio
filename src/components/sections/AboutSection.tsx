@@ -11,7 +11,8 @@ export function AboutSection() {
       aria-labelledby="about-heading"
     >
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl ghost-border group sm:max-w-lg lg:mx-0 lg:max-w-none lg:aspect-[4/5]">
+        {/* portrait frame: fixed dark well + overlay base so filters match dark theme in light mode */}
+        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl bg-[rgb(var(--c-case-study-thumb-bg))] ghost-border group sm:max-w-lg lg:mx-0 lg:max-w-none lg:aspect-[4/5]">
           <img
             src={IMAGES.aboutPortrait}
             alt={t("a11y.aboutPortrait")}
@@ -21,7 +22,7 @@ export function AboutSection() {
             loading="lazy"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgb(var(--c-about-portrait-overlay-from))] to-transparent"
             aria-hidden
           />
         </div>
