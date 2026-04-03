@@ -1,13 +1,27 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import type { RefObject } from "react";
 import { useTranslation } from "react-i18next";
 import { getExperienceEntries } from "../../data/experience";
 import type { ExperienceEntry } from "../../data/experience";
 
-/** Visible window height — cards slide vertically behind this clip (no inner scroll). */
-const VIEWPORT_PX = 720;
+/** Max visible window height on large screens (px) — CHANGED: cap only; fluid below. */
+const VIEWPORT_MAX_PX = 720;
 
-/** Each experience card block height inside the sliding strip (px). */
-const CARD_PX = 680;
+/** Min viewport height so carousel stays usable on small viewports (px). */
+const VIEWPORT_MIN_PX = 280;
+
+/** Max card content height on large screens (px); scales down with measured viewport. */
+const CARD_MAX_PX = 680;
+
+/** Min card content height (px) — CHANGED: avoid unreadable slivers when viewport is tight. */
+const CARD_MIN_PX = 240;
 
 /** Gap between stacked cards in the strip (px). */
 const CARD_GAP_PX = 16;
@@ -15,25 +29,64 @@ const CARD_GAP_PX = 16;
 /** Outer margin around each card slab (px); included in strip height math. */
 const CARD_MARGIN_PX = 10;
 
+/** Small gutter between card block and viewport clip (px) — CHANGED: proportional layout. */
+const VIEWPORT_INNER_GUTTER_PX = 8;
+
 function clamp(n: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, n));
 }
 
-/** Card block height in the strip (card + vertical margin). */
-function cardBlockHeightPx(): number {
-  return CARD_PX + 2 * CARD_MARGIN_PX;
+/** Card block height in the strip (card + vertical margin). — CHANGED: driven by measured card height. */
+function cardBlockHeightPx(cardContentHeightPx: number): number {
+  return cardContentHeightPx + 2 * CARD_MARGIN_PX;
 }
 
 /**
  * Vertical translate so the center of card `index` aligns with the viewport center (horizontal via items-center).
- * Replaces linear index/(n-1) interpolation — CHANGED: per-index centering for active card.
+ * Replaces linear index/(n-1) interpolation — CHANGED: per-index centering + measured viewport/card heights.
  */
-function translateYToCenterCard(index: number, itemCount: number): number {
-  if (itemCount <= 0) return 0;
-  const block = cardBlockHeightPx();
+function translateYToCenterCard(
+  index: number,
+  itemCount: number,
+  viewportHeightPx: number,
+  cardContentHeightPx: number,
+): number {
+  if (itemCount <= 0 || viewportHeightPx <= 0) return 0;
+  const block = cardBlockHeightPx(cardContentHeightPx);
   const step = block + CARD_GAP_PX;
   const cardCenterY = index * step + block / 2;
-  return VIEWPORT_PX / 2 - cardCenterY;
+  return viewportHeightPx / 2 - cardCenterY;
+}
+
+/** Observed content height of an element; 0 until first layout — CHANGED: sync transforms with real clip box. */
+function useObservedContentHeight(elementRef: RefObject<HTMLElement | null>): number {
+  const [heightPx, setHeightPx] = useState(0);
+
+  useLayoutEffect(() => {
+    const el = elementRef.current;
+    if (!el) return;
+
+    const update = () => {
+      setHeightPx(Math.round(el.getBoundingClientRect().height));
+    };
+
+    update();
+
+    const ro = new ResizeObserver(() => {
+      update();
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [elementRef]);
+
+  return heightPx;
+}
+
+/** Card content height from measured viewport — CHANGED: proportional, bounded by CARD_MIN/CARD_MAX. */
+function cardContentHeightFromViewport(viewportHeightPx: number): number {
+  if (viewportHeightPx <= 0) return CARD_MAX_PX;
+  const available = viewportHeightPx - 2 * CARD_MARGIN_PX - VIEWPORT_INNER_GUTTER_PX;
+  return clamp(Math.round(available), CARD_MIN_PX, CARD_MAX_PX);
 }
 
 function usePrefersReducedMotion(): boolean {
@@ -52,6 +105,8 @@ type ViewportCardProps = {
   entry: ExperienceEntry;
   index: number;
   activeIndex: number;
+  /** Content area height (px) — CHANGED: matches measured viewport for proportional layout. */
+  cardContentHeightPx: number;
   labels: {
     responsibilities: string;
     keyResults: string;
@@ -59,9 +114,15 @@ type ViewportCardProps = {
   };
 };
 
-/** Single card slab in the vertical strip (fixed height; clipped by parent overflow-hidden). */
-function ExperienceViewportCard({ entry, index, activeIndex, labels }: ViewportCardProps) {
-  const isDominant = index === activeIndex; 
+/** Single card slab in the vertical strip (height from viewport; clipped by parent overflow-hidden). */
+function ExperienceViewportCard({
+  entry,
+  index,
+  activeIndex,
+  cardContentHeightPx,
+  labels,
+}: ViewportCardProps) {
+  const isDominant = index === activeIndex;
 
   return (
     <article
@@ -71,8 +132,8 @@ function ExperienceViewportCard({ entry, index, activeIndex, labels }: ViewportC
           : "pointer-events-none scale-90 opacity-0"
       }`}
       style={{
-        height: CARD_PX,
-        minHeight: CARD_PX,
+        height: cardContentHeightPx,
+        minHeight: cardContentHeightPx,
         margin: CARD_MARGIN_PX,
       }}
       aria-hidden={!isDominant}
@@ -219,13 +280,24 @@ export function ExperienceSection() {
   const entries = useMemo(() => getExperienceEntries(i18n.language), [i18n.language]);
   const reduceMotion = usePrefersReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
+  const carouselViewportRef = useRef<HTMLDivElement>(null);
   const activeIndexRef = useRef(0);
   const carouselEnabled = !reduceMotion && entries.length > 0;
 
   const n = entries.length;
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const translateYPx = translateYToCenterCard(activeIndex, n);
+  const observedViewportHeightPx = useObservedContentHeight(carouselViewportRef);
+  const viewportHeightPx =
+    observedViewportHeightPx > 0 ? observedViewportHeightPx : VIEWPORT_MAX_PX;
+  const cardContentHeightPx = cardContentHeightFromViewport(viewportHeightPx);
+
+  const translateYPx = translateYToCenterCard(
+    activeIndex,
+    n,
+    viewportHeightPx,
+    cardContentHeightPx,
+  );
 
   useEffect(() => {
     activeIndexRef.current = activeIndex;
@@ -323,12 +395,14 @@ export function ExperienceSection() {
               })}
             </nav>
 
-            {/* Viewport: overflow hidden; strip translateY driven by nav state (no window scroll). */}
+            {/* Viewport: fluid height (vh + caps); strip translateY uses ResizeObserver — CHANGED: no fixed 720px lock. */}
             <div
+              ref={carouselViewportRef}
               className="relative min-w-0 flex-1 overflow-hidden rounded-xl border border-outline-variant/10 bg-surface-container/30"
               style={{
-                height: VIEWPORT_PX,
-                maxHeight: "min(720px, calc(100dvh - 5.5rem))",
+                minHeight: VIEWPORT_MIN_PX,
+                height: `max(${VIEWPORT_MIN_PX}px, min(${VIEWPORT_MAX_PX}px, calc(100dvh - 5.5rem), 78dvh))`,
+                maxHeight: `min(${VIEWPORT_MAX_PX}px, calc(100dvh - 5.5rem), 78dvh)`,
               }}
             >
               <div
@@ -344,6 +418,7 @@ export function ExperienceSection() {
                     entry={entry}
                     index={index}
                     activeIndex={activeIndex}
+                    cardContentHeightPx={cardContentHeightPx}
                     labels={labels}
                   />
                 ))}
