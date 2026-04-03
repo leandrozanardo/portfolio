@@ -24,13 +24,16 @@ function cardBlockHeightPx(): number {
   return CARD_PX + 2 * CARD_MARGIN_PX;
 }
 
-/** Total strip height and max translate so the last card can align into the viewport window. */
-function stripScrollMetrics(itemCount: number): { innerHeightPx: number; maxTranslatePx: number } {
-  if (itemCount <= 0) return { innerHeightPx: 0, maxTranslatePx: 0 };
+/**
+ * Vertical translate so the center of card `index` aligns with the viewport center (horizontal via items-center).
+ * Replaces linear index/(n-1) interpolation — CHANGED: per-index centering for active card.
+ */
+function translateYToCenterCard(index: number, itemCount: number): number {
+  if (itemCount <= 0) return 0;
   const block = cardBlockHeightPx();
-  const innerHeightPx = itemCount * block + Math.max(0, itemCount - 1) * CARD_GAP_PX;
-  const maxTranslatePx = Math.max(0, innerHeightPx - VIEWPORT_PX);
-  return { innerHeightPx, maxTranslatePx };
+  const step = block + CARD_GAP_PX;
+  const cardCenterY = index * step + block / 2;
+  return VIEWPORT_PX / 2 - cardCenterY;
 }
 
 function usePrefersReducedMotion(): boolean {
@@ -222,9 +225,7 @@ export function ExperienceSection() {
   const n = entries.length;
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const { maxTranslatePx } = useMemo(() => stripScrollMetrics(n), [n]);
-  const translateYPx =
-    n <= 1 ? 0 : -(activeIndex / Math.max(1, n - 1)) * maxTranslatePx;
+  const translateYPx = translateYToCenterCard(activeIndex, n);
 
   useEffect(() => {
     activeIndexRef.current = activeIndex;
@@ -327,11 +328,11 @@ export function ExperienceSection() {
               className="relative min-w-0 flex-1 overflow-hidden rounded-xl border border-outline-variant/10 bg-surface-container/30"
               style={{
                 height: VIEWPORT_PX,
-                maxHeight: "min720px, calc(100dvh - 5.5rem))",
+                maxHeight: "min(720px, calc(100dvh - 5.5rem))",
               }}
             >
               <div
-                className={`flex flex-col items-center will-change-transform ${stripTransitionClass}`}
+                className={`flex w-full min-w-0 flex-col items-center will-change-transform ${stripTransitionClass}`}
                 style={{
                   gap: CARD_GAP_PX,
                   transform: `translate3d(0, ${translateYPx}px, 0)`,
