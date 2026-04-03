@@ -71,9 +71,10 @@ const CONTACT_ITEMS: ContactItem[] = [
 
 function ContactRowIcon({ kind }: { kind: ContactItem["icon"] }) {
   if (kind === "resume")
+    // CHANGED: generic document glyph for DOCX resume (was picture_as_pdf)
     return (
       <span className="material-symbols-outlined size-5 shrink-0 text-[22px] leading-none" aria-hidden>
-        picture_as_pdf
+        description
       </span>
     );
   if (kind === "linkedin") return <LinkedInIcon className="size-5 shrink-0" />;

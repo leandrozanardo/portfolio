@@ -80,7 +80,7 @@ src/
   lib/            # Shared constants (contact, CV path, etc.)
 public/
   images/         # Case study & about imagery
-  cv_novo.pdf     # Résumé for download CTA
+  docs/CV.docx    # Résumé for download CTA (Word)
 ```
 
 ---
