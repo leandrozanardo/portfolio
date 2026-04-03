@@ -42,7 +42,7 @@ function StackCategoryCard({ meta }: { meta: StackCategoryMeta }) {
   return (
     <div className="flex flex-col gap-6 rounded-xl bg-surface-container-low p-6 ghost-border sm:p-8">
       <div className="flex items-center gap-3">
-        <MaterialIcon name={meta.icon} className={meta.iconColorClass} />
+        <MaterialIcon name={meta.icon} className={meta.accentTextClass} />
         <h3 className="text-lg font-bold tracking-tight text-on-surface">
           {t(`stack.${id}.title`)}
         </h3>
@@ -62,7 +62,7 @@ function StackCategoryCard({ meta }: { meta: StackCategoryMeta }) {
         ))}
       </ul>
       {/* One-line usage context below skill list (italic, not a list item). */}
-      <p className="text-xs italic leading-relaxed text-outline">
+      <p className={`text-xs italic leading-relaxed ${meta.accentTextClass}`}>
         {t(`stack.${id}.context`)}
       </p>
     </div>

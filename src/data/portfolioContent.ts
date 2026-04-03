@@ -52,7 +52,9 @@ export type StackCategoryId =
 export type StackCategoryMeta = {
   id: StackCategoryId;
   icon: string;
-  iconColorClass: string;
+  /** Icon + context paragraph color (matches stack accent slot). */
+  accentTextClass: string;
+  /** List marker fill using same hue as accentTextClass with alpha. */
   dotClass: string;
 };
 
@@ -60,31 +62,31 @@ export const STACK_CATEGORIES: StackCategoryMeta[] = [
   {
     id: "frontend",
     icon: "layers",
-    iconColorClass: "text-primary",
-    dotClass: "bg-primary/40",
+    accentTextClass: "text-[rgb(var(--c-stack-accent-0))]",
+    dotClass: "bg-[rgb(var(--c-stack-accent-0)/0.27)]",
   },
   {
     id: "backend",
     icon: "api",
-    iconColorClass: "text-secondary",
-    dotClass: "bg-secondary/40",
+    accentTextClass: "text-[rgb(var(--c-stack-accent-1))]",
+    dotClass: "bg-[rgb(var(--c-stack-accent-1)/0.27)]",
   },
   {
     id: "infra",
     icon: "cloud",
-    iconColorClass: "text-tertiary",
-    dotClass: "bg-tertiary/40",
+    accentTextClass: "text-[rgb(var(--c-stack-accent-2))]",
+    dotClass: "bg-[rgb(var(--c-stack-accent-2)/0.27)]",
   },
   {
     id: "database",
     icon: "database",
-    iconColorClass: "text-outline",
-    dotClass: "bg-outline/40",
+    accentTextClass: "text-[rgb(var(--c-stack-accent-3))]",
+    dotClass: "bg-[rgb(var(--c-stack-accent-3)/0.27)]",
   },
   {
     id: "design",
     icon: "draw",
-    iconColorClass: "text-on-surface",
-    dotClass: "bg-on-surface/40",
+    accentTextClass: "text-[rgb(var(--c-stack-accent-4))]",
+    dotClass: "bg-[rgb(var(--c-stack-accent-4)/0.27)]",
   },
 ];

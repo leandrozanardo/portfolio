@@ -62,6 +62,12 @@
   --c-case-study-thumb-bg: 53 53 52;
   /* About portrait bottom fade: same as .dark --c-surface-container-lowest (light theme was white) */
   --c-about-portrait-overlay-from: 14 14 14;
+  /* Stack section: five hues; midpoint between vivid pastel and ultra-muted (readable, still soft). */
+  --c-stack-accent-0: 153 180 225;
+  --c-stack-accent-1: 187 168 219;
+  --c-stack-accent-2: 218 178 177;
+  --c-stack-accent-3: 183 190 152;
+  --c-stack-accent-4: 152 198 192;
 }
 
 .dark {
@@ -119,6 +125,12 @@
   --hero-glow-center: 94 139 255;
   --gradient-text-from: 229 226 225;
   --gradient-text-to: 139 144 160;
+  /* Stack accents: dark theme midpoint (between saturated pastel and flat gray). */
+  --c-stack-accent-0: 128 150 182;
+  --c-stack-accent-1: 155 142 179;
+  --c-stack-accent-2: 179 143 143;
+  --c-stack-accent-3: 154 162 126;
+  --c-stack-accent-4: 121 165 158;
 }
 
 @layer base {
