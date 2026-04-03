@@ -2,6 +2,7 @@ import { SiteFooter } from "./components/layout/SiteFooter";
 import { SiteHeader } from "./components/layout/SiteHeader";
 import { SeoHead } from "./components/seo/SeoHead";
 import { AboutSection } from "./components/sections/AboutSection";
+import { AiExplorationSection } from "./components/sections/AiExplorationSection";
 import { ExperienceSection } from "./components/sections/ExperienceSection";
 import { FeaturedCaseStudiesSection } from "./components/sections/FeaturedCaseStudiesSection";
 import { HeroSection } from "./components/sections/HeroSection";
@@ -21,6 +22,7 @@ export default function App() {
         <ExperienceSection />
         <TechStackSection />
         <ValuePropositionSection />
+        <AiExplorationSection />
         <AboutSection />
       </main>
       <SiteFooter />

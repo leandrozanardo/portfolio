@@ -208,6 +208,44 @@
       "body": "Background and practice in graphic design and UI/UX: consistent interfaces, operational efficiency, and strong user experience without sacrificing technical feasibility."
     }
   },
+  "aiExploration": {
+    "title": "Applied AI for engineering, automation, and product",
+    "intro": "I continuously study applied AI and already weave it into my engineering flow to think more clearly, prototype faster, and validate with sharper signal. My interest goes beyond casual AI use: I track agents, structured context, controllable workflows, and practical integration across product, engineering, and operations.",
+    "introBridge": "In practice, it accelerates my loop from idea through validation, prototyping, and implementation, without giving up technical judgment.",
+    "usageTitle": "Workflow and exploration",
+    "dailyLabel": "AI in the engineering flow",
+    "dailyBody": "The focus is clarity, iteration, review, and implementation: structured reasoning, shorter experiments, and code that lands with proper review. ChatGPT, Stitch, and Cursor go where they add speed; the final call stays with the engineer.",
+    "studyLabel": "Study and experimentation",
+    "studyBody": "Less technology laundry lists, more how the pieces connect: models, rules, tools, and context become repeatable, tunable flows. Exploration that returns to implementation, flow, and product, not just demos.",
+    "repertoireTitle": "Repertoire and experimentation",
+    "quote": "I use AI to shorten the path from idea to validation to code, increase exploration speed, and expand how much I can execute, without outsourcing technical judgment.",
+    "cards": {
+      "llm": {
+        "title": "LLMs and agents",
+        "body": "I explore LLMs and multi-step agent flows with a focus on orchestration, assisted reasoning, and practical use in engineering work. I care about where those flows actually add value to engineering, not superficial experimentation."
+      },
+      "assisted": {
+        "title": "AI-assisted development",
+        "body": "Assisted implementation and refactoring, architecture exploration, and tighter cycles in the editor, with end-to-end technical responsibility."
+      },
+      "mcpRules": {
+        "title": "MCP, rules, and context",
+        "body": "How instructions, memory, tools, and execution connect: MCP and structured context for predictable flows; a useful system is more than a loose prompt."
+      },
+      "agentEcosystems": {
+        "title": "Agent ecosystems and orchestration",
+        "body": "Clawbot, Moldbot, and OpenClaw as reference points for roles, flows, and execution contexts. Hands-on experimentation focused on applied learning, including a personal workspace in that ecosystem."
+      },
+      "image": {
+        "title": "Image generation and visual prototyping",
+        "body": "Stable Diffusion, models, and LoRAs for fine control and fast visual prototyping. Midjourney, Stitch, and ChatGPT image generation when they help iterate concept, UI, and visual direction faster."
+      },
+      "productDirection": {
+        "title": "Applied AI for product and real-world flows",
+        "body": "I think about where AI adds concrete value across backlog, delivery, automation, and everyday UX, not only as a roadmap concept. Execution that aligns with the team and the product in real use."
+      }
+    }
+  },
   "about": {
     "title": "I'm Leandro Zanardo.",
     "subtitle": "Building the backbone of modern digital experiences.",

@@ -208,6 +208,44 @@
       "body": "Formación y práctica en diseño gráfico y UI/UX: interfaces consistentes, eficiencia operativa y buena experiencia de usuario sin sacrificar viabilidad técnica."
     }
   },
+  "aiExploration": {
+    "title": "IA aplicada a ingeniería, automatización y producto",
+    "intro": "Estudio IA aplicada continuamente y ya la incorporo a mi flujo de ingeniería para pensar con más claridad, prototipar más rápido y validar con más precisión. Mi interés va más allá del uso casual de la IA: sigo agentes, contexto estructurado, flujos controlables e integración práctica en producto, ingeniería y operaciones.",
+    "introBridge": "En la práctica, acelero el ciclo entre idea, validación, prototipado e implementación, sin renunciar al criterio técnico.",
+    "usageTitle": "Flujo de trabajo y exploración",
+    "dailyLabel": "IA en el flujo de ingeniería",
+    "dailyBody": "El foco es claridad, iteración, revisión e implementación: razonamiento estructurado, experimentos más cortos y código que llega revisado. ChatGPT, Stitch y Cursor entran donde suman velocidad; la decisión final sigue siendo del ingeniero.",
+    "studyLabel": "Estudio y experimentación",
+    "studyBody": "Menos lista de tecnologías, más cómo encajan las piezas: modelos, reglas, herramientas y contexto se vuelven flujos repetibles y ajustables. Exploración que vuelve a implementación, flujo y producto, no solo a demostración.",
+    "repertoireTitle": "Repertorio y experimentación",
+    "quote": "Uso IA para acortar el camino entre idea, validación y código, ganar velocidad de exploración y ampliar mi capacidad de ejecución, sin externalizar el juicio técnico.",
+    "cards": {
+      "llm": {
+        "title": "LLMs y agentes",
+        "body": "Exploro LLMs y flujos con agentes en múltiples etapas, con foco en orquestación, razonamiento asistido y uso práctico en ingeniería. Con foco en entender dónde esos flujos realmente aportan a la ingeniería."
+      },
+      "assisted": {
+        "title": "Desarrollo asistido",
+        "body": "Implementación y refactorización asistidas, exploración de arquitectura y ciclos más cortos en el editor, con responsabilidad técnica de punta a punta."
+      },
+      "mcpRules": {
+        "title": "MCP, reglas y contexto",
+        "body": "Cómo se conectan instrucciones, memoria, herramientas y ejecución: MCP y contexto estructurado para flujos predecibles; un sistema útil va más allá del prompt suelto."
+      },
+      "agentEcosystems": {
+        "title": "Ecosistemas agentes y orquestación",
+        "body": "Clawbot, Moldbot y OpenClaw como referencia de roles, flujos y contextos de ejecución. Experimentación hands-on orientada al aprendizaje aplicado, con un workspace propio en ese tipo de ecosistema."
+      },
+      "image": {
+        "title": "Generación de imagen y prototipado visual",
+        "body": "Stable Diffusion, modelos y LoRAs para control fino y prototipado visual rápido. Midjourney, Stitch y generación en ChatGPT entran cuando ayudan a iterar concepto, interfaz y dirección visual con más velocidad."
+      },
+      "productDirection": {
+        "title": "IA aplicada al producto y flujos reales",
+        "body": "Pienso dónde la IA aporta de forma concreta en backlog, entrega, automatización y UX del día a día, no solo como concepto de roadmap. Ejecución alineada con el equipo y el producto en uso real."
+      }
+    }
+  },
   "about": {
     "title": "Soy Leandro Zanardo.",
     "subtitle": "Construyendo la columna vertebral de experiencias digitales modernas.",
