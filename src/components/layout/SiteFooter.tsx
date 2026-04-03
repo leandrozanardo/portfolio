@@ -17,8 +17,8 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-10 md:flex-row md:gap-12">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <div className="flex items-center justify-center gap-2 md:justify-start">
-            <div className="size-4 text-primary">
-              <LogoMark className="size-4" />
+            <div className="size-16 shrink-0">
+              <LogoMark className="size-16" />
             </div>
             <span className="font-bold text-on-surface">
               {t("brand.fullName")}

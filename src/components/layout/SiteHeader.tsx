@@ -43,7 +43,8 @@ export function SiteHeader() {
             className="flex min-w-0 items-center gap-3 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={t("brand.portfolio")}
           >
-            <LogoMark />
+            {/* Logo mark ~1.5× default (size-6 → size-9) for header */}
+            <LogoMark className="size-9" />
             <span className="truncate text-lg font-bold leading-tight tracking-tight text-on-surface">
               {t("brand.portfolio")}
             </span>
