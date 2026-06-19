@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { CONTACT_MAILTO, CV_PATH, SOCIAL_URLS } from "../../lib/constants";
+import { CONTACT_MAILTO, getCvPath, SOCIAL_URLS } from "../../lib/constants";
 import { IMAGES } from "../../data/portfolioContent";
 import { WhatsAppGlyph } from "../ui/icons/WhatsAppGlyph";
+import { LinkedInIcon } from "../ui/LinkedInIcon";
 import { MaterialIcon } from "../ui/MaterialIcon";
 
 export function HeroSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const cvPath = getCvPath(i18n.language);
 
   return (
     <section
@@ -36,7 +38,7 @@ export function HeroSection() {
               {t("hero.ctaCaseStudies")}
             </a>
             <a
-              href={CV_PATH}
+              href={cvPath}
               download
               className="rounded-lg bg-surface-container-high px-6 py-3.5 text-base font-bold tracking-wide text-on-surface ghost-border transition-all sm:px-8 sm:py-4"
             >
@@ -54,6 +56,15 @@ export function HeroSection() {
                 aria-label={t("a11y.openWhatsApp")}
               >
                 <WhatsAppGlyph className="h-4 w-4 shrink-0" />
+              </a>
+              <a
+                href={SOCIAL_URLS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex size-6 shrink-0 items-center justify-center text-on-surface-variant transition-colors hover:text-[rgb(var(--color-light-brand-primary))] dark:hover:text-[rgb(var(--color-dark-brand-primary))]"
+                aria-label={t("a11y.linkedinProfile")}
+              >
+                <LinkedInIcon className="h-4 w-4 shrink-0" />
               </a>
               <a
                 href={CONTACT_MAILTO}

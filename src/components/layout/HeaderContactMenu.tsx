@@ -1,7 +1,7 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDisclosureFocus } from "../../hooks/useDisclosureFocus";
-import { CONTACT_MAILTO, CV_PATH, SOCIAL_URLS } from "../../lib/constants";
+import { CONTACT_MAILTO, getCvPath, SOCIAL_URLS } from "../../lib/constants";
 import { GitHubGlyph } from "../ui/icons/GitHubGlyph";
 import { WhatsAppGlyph } from "../ui/icons/WhatsAppGlyph";
 import { LinkedInIcon } from "../ui/LinkedInIcon";
@@ -33,49 +33,51 @@ type ContactItem = {
   icon: "resume" | "linkedin" | "mail" | "whatsapp" | "github";
 };
 
-const CONTACT_ITEMS: ContactItem[] = [
-  {
-    id: "resume",
-    href: CV_PATH,
-    labelKey: "nav.resume",
-    ariaKey: "a11y.downloadResume",
-    external: false,
-    download: true,
-    icon: "resume",
-  },
-  {
-    id: "linkedin",
-    href: SOCIAL_URLS.linkedin,
-    labelKey: "footer.linkedin",
-    ariaKey: "a11y.linkedinProfile",
-    external: true,
-    icon: "linkedin",
-  },
-  {
-    id: "email",
-    href: CONTACT_MAILTO,
-    labelKey: "footer.email",
-    ariaKey: "a11y.contactEmail",
-    external: false,
-    icon: "mail",
-  },
-  {
-    id: "whatsapp",
-    href: SOCIAL_URLS.whatsapp,
-    labelKey: "footer.whatsapp",
-    ariaKey: "a11y.openWhatsApp",
-    external: true,
-    icon: "whatsapp",
-  },
-  {
-    id: "github",
-    href: SOCIAL_URLS.github,
-    labelKey: "footer.github",
-    ariaKey: "a11y.githubProfile",
-    external: true,
-    icon: "github",
-  },
-];
+function buildContactItems(cvPath: string): ContactItem[] {
+  return [
+    {
+      id: "resume",
+      href: cvPath,
+      labelKey: "nav.resume",
+      ariaKey: "a11y.downloadResume",
+      external: false,
+      download: true,
+      icon: "resume",
+    },
+    {
+      id: "linkedin",
+      href: SOCIAL_URLS.linkedin,
+      labelKey: "footer.linkedin",
+      ariaKey: "a11y.linkedinProfile",
+      external: true,
+      icon: "linkedin",
+    },
+    {
+      id: "email",
+      href: CONTACT_MAILTO,
+      labelKey: "footer.email",
+      ariaKey: "a11y.contactEmail",
+      external: false,
+      icon: "mail",
+    },
+    {
+      id: "whatsapp",
+      href: SOCIAL_URLS.whatsapp,
+      labelKey: "footer.whatsapp",
+      ariaKey: "a11y.openWhatsApp",
+      external: true,
+      icon: "whatsapp",
+    },
+    {
+      id: "github",
+      href: SOCIAL_URLS.github,
+      labelKey: "footer.github",
+      ariaKey: "a11y.githubProfile",
+      external: true,
+      icon: "github",
+    },
+  ];
+}
 
 function ContactRowIcon({ kind }: { kind: ContactItem["icon"] }) {
   if (kind === "resume")
@@ -102,7 +104,11 @@ function ContactRowIcon({ kind }: { kind: ContactItem["icon"] }) {
 }
 
 export function HeaderContactMenu({ layout, onNavigate }: HeaderContactMenuProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const contactItems = useMemo(
+    () => buildContactItems(getCvPath(i18n.language)),
+    [i18n.language]
+  );
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
@@ -141,7 +147,7 @@ export function HeaderContactMenu({ layout, onNavigate }: HeaderContactMenuProps
           {t("nav.contact")}
         </p>
         <div className="flex flex-col gap-2">
-          {CONTACT_ITEMS.map((item) => (
+          {contactItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
@@ -194,7 +200,7 @@ export function HeaderContactMenu({ layout, onNavigate }: HeaderContactMenuProps
           aria-labelledby={contactButtonId}
           className="absolute right-0 top-[calc(100%+6px)] z-[60] min-w-[13rem] rounded-lg border border-outline-variant/20 bg-surface-container-high py-1 shadow-lg ghost-border"
         >
-          {CONTACT_ITEMS.map((item) => (
+          {contactItems.map((item) => (
             <a
               key={item.id}
               href={item.href}

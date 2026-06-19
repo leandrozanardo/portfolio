@@ -7,7 +7,13 @@ export const THEME_COLOR_META = {
   light: "#f7f8fc",
 } as const;
 
-export const CV_PATH = "/docs/CV.docx" as const;
+export const CV_PATH_CURRICULO = "/docs/curriculo_leandro_zanardo.pdf" as const;
+export const CV_PATH_RESUME = "/docs/resume_leandro_zanardo.pdf" as const;
+
+/** Locale-aware résumé download: EN → English PDF; PT-BR / ES → Portuguese PDF */
+export function getCvPath(locale: string): string {
+  return locale === "en" ? CV_PATH_RESUME : CV_PATH_CURRICULO;
+}
 
 export const CONTACT_MAILTO = "mailto:leandrozanardo@gmail.com" as const;
 
