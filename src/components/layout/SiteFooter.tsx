@@ -4,9 +4,9 @@ import { LogoMark } from "../ui/LogoMark";
 
 const FOOTER_LINKS = [
   { href: SOCIAL_URLS.linkedin, labelKey: "footer.linkedin" as const },
-  { href: SOCIAL_URLS.github, labelKey: "footer.github" as const },
-  { href: CONTACT_MAILTO, labelKey: "footer.email" as const },
   { href: SOCIAL_URLS.whatsapp, labelKey: "footer.whatsapp" as const },
+  { href: CONTACT_MAILTO, labelKey: "footer.email" as const },
+  { href: SOCIAL_URLS.github, labelKey: "footer.github" as const },
 ];
 
 export function SiteFooter() {
