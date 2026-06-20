@@ -54,6 +54,7 @@
   },
   "nav": {
     "projects": "Strengths",
+    "ownProducts": "Products",
     "experience": "Experience",
     "stack": "Stack",
     "about": "About",
@@ -114,6 +115,55 @@
       "description": "Deep skills in designing and operating REST and GraphQL APIs, backend services, and business-critical integration flows—with disciplined error handling and production visibility.",
       "detail": "Pragmatic versioning, containerized environments, observability, and practices that reduce incidents and time-to-diagnose when things go wrong.",
       "stack": "Node.js / Express, GraphQL / REST, Docker, PostgreSQL, Redis, APM & structured logging"
+    }
+  },
+  "ownProducts": {
+    "title": "Own products in production",
+    "subtitle": "Real solutions where architecture, product, design, and engineering meet.",
+    "authorshipBadge": "100% solo-authored · solo dev · no team",
+    "intro": "Beyond corporate projects, I also build complete digital products entirely on my own—with no team, partners, or external help. From concept and architecture through interface design, full-stack development, deployment, and continuous evolution, these products show my ability to turn real problems into navigable, useful solutions built to scale.",
+    "roleLabel": "Authorship & scope",
+    "techFocusLabel": "Technical focus",
+    "valueLabel": "Value",
+    "cta": "View product",
+    "nexionCore": {
+      "tag": "B2B SaaS / Occupational health / NR-1 / People Analytics",
+      "name": "NEXION CORE",
+      "headline": "SaaS platform for preventive psychosocial risk management and NR-1 compliance support.",
+      "description": "B2B product built to help companies organize, monitor, and analyze data related to workplace well-being, psychosocial risks, organizational climate, and preventive actions.",
+      "role": "I conceived, architected, designed the experience, built front-end, back-end, and database, published, and evolve it alone—a 100% solo-authored product with no dedicated team.",
+      "techFocus": "Multi-portal setup, dashboards, role-based permissions, data isolation, reports, follow-up workflows, and secure experiences for different user types.",
+      "value": "Turns sensitive, scattered data into a clearer, preventive, and actionable view for companies, managers, and technical leads.",
+      "imageAlt": "Screenshot of the NEXION CORE public platform interface for psychosocial risk management.",
+      "chips": {
+        "b2bSaas": "B2B SaaS",
+        "multiportal": "Multi-portal",
+        "dashboards": "Dashboards",
+        "nr1": "NR-1",
+        "riskManagement": "Risk Management",
+        "uxUi": "UX/UI",
+        "fullStack": "Full-stack",
+        "soloAuthored": "100% solo-authored"
+      }
+    },
+    "sprintdeck": {
+      "tag": "Agile SaaS / Planning Poker / Real-time Collaboration",
+      "name": "SprintDeck",
+      "headline": "Online planning poker for agile teams to estimate sprints with more clarity.",
+      "description": "Tool built to streamline estimation sessions for remote and hybrid teams—with a simple flow, real-time collaboration, and less friction during agile ceremonies.",
+      "role": "Product, UX/UI, front-end, back-end, architecture, and deployment built entirely by me—100% solo-authored, no collaborators or team.",
+      "techFocus": "Estimation rooms, real-time experience, focused interface, lightweight flow, and usability tailored for development teams.",
+      "value": "Helps teams estimate tasks with more alignment, transparency, and speed—improving dynamics between developers, POs, and stakeholders.",
+      "imageAlt": "Screenshot of the SprintDeck landing page, a planning poker tool for agile teams.",
+      "chips": {
+        "planningPoker": "Planning Poker",
+        "scrum": "Scrum",
+        "realTime": "Real-time",
+        "agileTeams": "Agile Teams",
+        "productDesign": "Product Design",
+        "fullStack": "Full-stack",
+        "soloAuthored": "100% solo-authored"
+      }
     }
   },
   "experience": {

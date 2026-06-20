@@ -10,6 +10,7 @@ import { SkipLink } from "./SkipLink";
 
 const NAV_LINKS = [
   { href: "#projects", key: "nav.projects" as const },
+  { href: "#own-products", key: "nav.ownProducts" as const },
   { href: "#experience", key: "nav.experience" as const },
   { href: "#stack", key: "nav.stack" as const },
   { href: "#about", key: "nav.about" as const },

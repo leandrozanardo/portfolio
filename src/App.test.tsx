@@ -62,6 +62,54 @@ describe("App", () => {
     expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
   });
 
+  it("renders own products section heading", () => {
+    render(
+      <Providers>
+        <App />
+      </Providers>,
+    );
+    expect(
+      screen.getByRole("heading", {
+        level: 2,
+        name: /Produtos próprios em produção|Own products in production|Productos propios en producción/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it("lists own products with NEXION CORE before SprintDeck", () => {
+    render(
+      <Providers>
+        <App />
+      </Providers>,
+    );
+    const productHeadings = screen
+      .getAllByRole("heading", { level: 3 })
+      .map((el) => el.textContent?.trim());
+    const nexionIndex = productHeadings.indexOf("NEXION CORE");
+    const sprintdeckIndex = productHeadings.indexOf("SprintDeck");
+    expect(nexionIndex).toBeGreaterThanOrEqual(0);
+    expect(sprintdeckIndex).toBeGreaterThan(nexionIndex);
+  });
+
+  it("exposes secure external product links", () => {
+    render(
+      <Providers>
+        <App />
+      </Providers>,
+    );
+    const productLinks = screen.getAllByRole("link", { name: /Ver produto|View product/i });
+    expect(productLinks).toHaveLength(2);
+
+    for (const link of productLinks) {
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link.getAttribute("rel") ?? "").toMatch(/noopener/);
+      expect(link.getAttribute("rel") ?? "").toMatch(/noreferrer/);
+    }
+
+    expect(productLinks[0]).toHaveAttribute("href", "https://nexion-core.com/");
+    expect(productLinks[1]).toHaveAttribute("href", "https://sprintdeck.net/");
+  });
+
   it("renders not found page for unknown routes", () => {
     render(
       <Providers initialEntries={["/rota-que-nao-existe"]}>

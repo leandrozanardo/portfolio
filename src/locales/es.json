@@ -54,6 +54,7 @@
   },
   "nav": {
     "projects": "Competencias",
+    "ownProducts": "Productos",
     "experience": "Experiencia",
     "stack": "Stack",
     "about": "Sobre",
@@ -114,6 +115,55 @@
       "description": "Sólidas habilidades para diseñar y operar APIs REST y GraphQL, servicios backend e integraciones de misión crítica, con manejo de errores disciplinado y visibilidad en producción.",
       "detail": "Versionado pragmático, entornos containerizados, observabilidad y prácticas que reducen incidentes y el tiempo de diagnóstico cuando algo falla.",
       "stack": "Node.js / Express, GraphQL / REST, Docker, PostgreSQL, Redis, APM y logs estructurados"
+    }
+  },
+  "ownProducts": {
+    "title": "Productos propios en producción",
+    "subtitle": "Soluciones reales donde arquitectura, producto, diseño e ingeniería se encuentran.",
+    "authorshipBadge": "100% autoral · solo dev · sin equipo",
+    "intro": "Además de proyectos corporativos, también construyo productos digitales completos de forma integralmente autoral — sin equipo, socios ni ayuda externa. Desde la concepción y arquitectura hasta el diseño de interfaz, desarrollo full-stack, deploy y evolución continua, estos productos muestran mi capacidad de transformar problemas reales en soluciones navegables, útiles y preparadas para crecer.",
+    "roleLabel": "Autoría y alcance",
+    "techFocusLabel": "Enfoque técnico",
+    "valueLabel": "Valor",
+    "cta": "Ver producto",
+    "nexionCore": {
+      "tag": "B2B SaaS / Salud ocupacional / NR-1 / People Analytics",
+      "name": "NEXION CORE",
+      "headline": "Plataforma SaaS para gestión preventiva de riesgos psicosociales y apoyo a la conformidad con la NR-1.",
+      "description": "Producto B2B desarrollado para apoyar a empresas en la organización, monitoreo y análisis de datos relacionados con el bienestar laboral, riesgos psicosociales, clima organizacional y acciones preventivas.",
+      "role": "Concepción, arquitectura, diseño de experiencia, front-end, back-end, base de datos, publicación y evolución en solitario — producto 100% autoral, sin equipo dedicado.",
+      "techFocus": "Multiportal, dashboards, permisos por perfil, aislamiento de datos, reportes, flujos de seguimiento y experiencia segura para distintos tipos de usuarios.",
+      "value": "Transforma datos sensibles y dispersos en una visión más clara, preventiva y accionable para empresas, gestores y responsables técnicos.",
+      "imageAlt": "Captura de la interfaz pública de la plataforma NEXION CORE para gestión de riesgos psicosociales.",
+      "chips": {
+        "b2bSaas": "B2B SaaS",
+        "multiportal": "Multiportal",
+        "dashboards": "Dashboards",
+        "nr1": "NR-1",
+        "riskManagement": "Risk Management",
+        "uxUi": "UX/UI",
+        "fullStack": "Full-stack",
+        "soloAuthored": "100% autoral"
+      }
+    },
+    "sprintdeck": {
+      "tag": "Agile SaaS / Planning Poker / Colaboración en tiempo real",
+      "name": "SprintDeck",
+      "headline": "Planning poker online para que equipos ágiles estimen sprints con más claridad.",
+      "description": "Herramienta creada para facilitar sesiones de estimación en equipos remotos e híbridos, con flujo simple, colaboración en tiempo real y foco en reducir fricción durante ceremonias ágiles.",
+      "role": "Producto, UX/UI, front-end, back-end, arquitectura y deploy desarrollados íntegramente por mí — 100% autoral, sin colaboradores ni equipo.",
+      "techFocus": "Salas de estimación, experiencia en tiempo real, interfaz objetiva, flujo ligero y usabilidad pensada para equipos de desarrollo.",
+      "value": "Ayuda a equipos a estimar tareas con más alineación, transparencia y velocidad, mejorando la dinámica entre devs, POs y stakeholders.",
+      "imageAlt": "Captura de la landing page de SprintDeck, herramienta de planning poker para equipos ágiles.",
+      "chips": {
+        "planningPoker": "Planning Poker",
+        "scrum": "Scrum",
+        "realTime": "Real-time",
+        "agileTeams": "Agile Teams",
+        "productDesign": "Product Design",
+        "fullStack": "Full-stack",
+        "soloAuthored": "100% autoral"
+      }
     }
   },
   "experience": {

@@ -10,6 +10,10 @@ export const IMAGES = {
   caseRisk: "/images/case-risk.png",
   /** Local asset: public/images/about-portrait.png */
   aboutPortrait: "/images/about-portrait.png",
+  /** Own product — NEXION CORE public landing */
+  productNexionCore: "/images/product-nexion-core.png",
+  /** Own product — SprintDeck public landing */
+  productSprintdeck: "/images/product-sprintdeck.png",
 } as const;
 
 export type CaseStudyId = "platforms" | "commerce" | "apis";

@@ -6,6 +6,7 @@ import { AiExplorationSection } from "../components/sections/AiExplorationSectio
 import { ExperienceSection } from "../components/sections/ExperienceSection";
 import { FeaturedCaseStudiesSection } from "../components/sections/FeaturedCaseStudiesSection";
 import { HeroSection } from "../components/sections/HeroSection";
+import { OwnProductsSection } from "../components/sections/OwnProductsSection";
 import { RecruiterSnapshotSection } from "../components/sections/RecruiterSnapshotSection";
 import { TechStackSection } from "../components/sections/TechStackSection";
 import { ValuePropositionSection } from "../components/sections/ValuePropositionSection";
@@ -19,6 +20,7 @@ export function HomePage() {
         <HeroSection />
         <RecruiterSnapshotSection />
         <FeaturedCaseStudiesSection />
+        <OwnProductsSection />
         <ExperienceSection />
         <TechStackSection />
         <ValuePropositionSection />
